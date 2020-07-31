@@ -35,7 +35,12 @@ const AboutPage = ({ translations, pics, seo }: AboutPageProps) => {
                 data-url="https://calendly.com/thomas-maclean/afspraak?hide_event_type_details=1"
                 style={{ minWidth: '320px', height: '630px' }}
               ></div>
-
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+                ipsa voluptatem, nam odio quam maiores perferendis neque illum
+                mollitia eveniet, pariatur iure dignissimos distinctio debitis
+                ab, consequatur quaerat quod fugiat?
+              </p>
               {/* <div style={{ height: '800px' }}>
                 <iframe
                   src="https://calendly.com/thomas-maclean/afspraak"
