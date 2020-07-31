@@ -37,10 +37,6 @@ export default class MyDocument extends Document {
             });`,
             }}
           ></script> */}
-          <script
-            type="text/javascript"
-            src="https://assets.calendly.com/assets/external/widget.js"
-          ></script>
         </Head>
         <body>
           <Main />
