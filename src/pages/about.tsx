@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { TranslationsType, ImagesType, SEOType } from '../types';
 
@@ -12,6 +12,15 @@ import {
 import { getDataFromAirtable } from '../utils';
 
 const AboutPage = ({ translations, pics, seo }: AboutPageProps) => {
+  useEffect(() => {
+    const head = document.querySelector('head');
+    const script = document.createElement('script');
+    script.setAttribute(
+      'src',
+      'https://assets.calendly.com/assets/external/widget.js'
+    );
+    head!.appendChild(script);
+  }, []);
   return (
     <PictureContext.Provider value={pics}>
       <SEOContext.Provider value={seo}>
@@ -20,6 +29,21 @@ const AboutPage = ({ translations, pics, seo }: AboutPageProps) => {
             <Main>
               <SEO seo={seo}></SEO>
               <h1>About</h1>
+
+              <div
+                className="calendly-inline-widget"
+                data-url="https://calendly.com/thomas-maclean/afspraak?hide_event_type_details=1"
+                style={{ minWidth: '320px', height: '630px' }}
+              ></div>
+
+              {/* <div style={{ height: '800px' }}>
+                <iframe
+                  src="https://calendly.com/thomas-maclean/afspraak"
+                  width="100%"
+                  height="100%"
+                  frameBorder="0"
+                ></iframe>
+              </div> */}
             </Main>
           </Layout>
         </TranslationContext.Provider>
@@ -48,4 +72,3 @@ type AboutPageProps = {
   seo: SEOType[];
 };
 export default AboutPage;
-
