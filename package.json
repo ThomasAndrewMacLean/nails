@@ -25,6 +25,7 @@
   "homepage": "https://github.com/ThomasAndrewMacLean/next_template#readme",
   "dependencies": {
     "@types/marked": "^1.1.0",
+    "@types/node": "^14.0.27",
     "@types/styled-components": "^5.1.1",
     "@zeit/next-css": "^1.0.1",
     "airtable": "^0.8.1",
