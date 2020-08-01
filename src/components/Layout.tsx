@@ -28,16 +28,6 @@ const Layout = ({ children, page }: LayoutProps) => {
                   </li>
                 );
               })}
-            {/* <li>
-              <NavLink active={page === 'home'} href={prefix + '/'}>
-                <T translationKey="homeTitle"></T>
-              </NavLink>
-            </li>
-            <li>
-              <NavLink active={page === 'contact'} href={prefix + '/contact'}>
-                <T translationKey="contactTitle"></T>
-              </NavLink>
-            </li> */}
           </ul>
         </nav>
       </Header>
