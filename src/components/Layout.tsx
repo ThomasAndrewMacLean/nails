@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import { T } from '.';
+import { T, FullWidthContainer, InnerContainer } from '.';
 import { prefix } from '../utils';
 import { pages } from '../constants/pages';
 
@@ -35,10 +35,25 @@ const Layout = ({ children, page }: LayoutProps) => {
         </nav> */}
       </Header>
       {children}
-      <Footer>
-        <div>facebook</div>
-        <address>contact</address>
-      </Footer>
+      <FullWidthContainer textColor="white" backgroundColor="var(--text-dark)">
+        <InnerContainer>
+          <Footer>
+            <address>
+              <T translationKey="address"></T>
+            </address>
+            <div>
+              <ul>
+                <li>
+                  <a href="#">facebook</a>
+                </li>
+                <li>
+                  <a href="#">linkedin</a>
+                </li>
+              </ul>
+            </div>
+          </Footer>
+        </InnerContainer>
+      </FullWidthContainer>
     </Main>
   );
 };
@@ -94,7 +109,17 @@ const NavLink = styled.a<{ active: boolean }>`
 const Footer = styled.footer`
   display: flex;
   justify-content: space-between;
-  padding: 2rem 0;
+  padding: 4rem 0;
+
+  ul {
+    text-align: right;
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 `;
 
 Layout.propTypes = {
