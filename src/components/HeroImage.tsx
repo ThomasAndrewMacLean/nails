@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import * as Styles from './HeroImage.styles';
 import { PictureContext } from '../utils/contexts';
 
-import { FullWidthContainer, Image } from './';
+import { FullWidthContainer } from './';
 import { getImageUrl } from '../utils';
 
 type PropsType = {};
