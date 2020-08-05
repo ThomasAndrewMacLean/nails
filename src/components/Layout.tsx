@@ -14,8 +14,11 @@ const Layout = ({ children, page }: LayoutProps) => {
   return (
     <Main>
       <Header>
-        <T translationKey="title"></T>
-        <nav>
+        <div>
+          <T translationKey="title"></T>
+          <T translationKey="subTitle"></T>
+        </div>
+        {/* <nav>
           <ul>
             {pages
               .filter((p) => p.showInNav)
@@ -29,7 +32,7 @@ const Layout = ({ children, page }: LayoutProps) => {
                 );
               })}
           </ul>
-        </nav>
+        </nav> */}
       </Header>
       {children}
       <Footer>
@@ -48,10 +51,21 @@ const Main = styled.main`
 const Header = styled.header`
   h1 {
     font-weight: 100;
+    font-size: 5rem;
+    letter-spacing: 2px;
+  }
+  h2 {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    text-align: center;
+    font-weight: 700;
   }
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 4rem 0;
+  margin-top: 2rem;
+  background-color: #ffffffaa;
   nav {
   }
   ul {

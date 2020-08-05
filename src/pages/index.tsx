@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 // import PropTypes from 'prop-types';
 
-import { T, Image, Layout, SEO } from '../components';
-import { useStore } from '../store';
-import { HELLOWORLD } from '../constants';
-import { add } from '../utils';
+import {
+  T,
+  Products,
+  Afspraak,
+  Layout,
+  Button,
+  SEO,
+  FullWidthContainer,
+  InnerContainer,
+  HeroImage,
+} from '../components';
+
 import {
   TranslationContext,
   PictureContext,
@@ -15,7 +23,15 @@ import { getDataFromAirtable } from '../utils';
 import { TranslationsType, ImagesType, SEOType } from '../types';
 
 const IndexPage = ({ translations, pics, seo }: IndexPageProps) => {
-  const { count, countPlusOne } = useStore();
+  useEffect(() => {
+    const head = document.querySelector('head');
+    const script = document.createElement('script');
+    script.setAttribute(
+      'src',
+      'https://assets.calendly.com/assets/external/widget.js'
+    );
+    head!.appendChild(script);
+  }, []);
   return (
     <PictureContext.Provider value={pics}>
       <SEOContext.Provider value={seo}>
@@ -23,12 +39,29 @@ const IndexPage = ({ translations, pics, seo }: IndexPageProps) => {
           <Layout page="home">
             <Main>
               <SEO seo={seo}></SEO>
-              <h1>{HELLOWORLD}</h1>
-              <T translationKey="test"></T>
-              <T translationKey="test2"></T>
-              <button onClick={countPlusOne}>+</button>
-              <Image style={{ width: '100%' }} imageKey="hero-image"></Image>
-              {count}+ 1 = {add(count, 1)}
+              <HeroImage></HeroImage>
+              <FullWidthContainer
+                style={{
+                  fontSize: '1.2rem',
+                  textAlign: 'center',
+                  marginBottom: '8rem',
+                  marginTop: '6rem',
+                  padding: '4rem',
+                }}
+                backgroundColor="var(--background-light)"
+                textColor="var(--text-grey)"
+              >
+                <InnerContainer>
+                  <p>
+                    <T translationKey="introTekst" />
+                  </p>
+                  <Button href="#maak-afspraak">maak afspraak</Button>
+                </InnerContainer>
+              </FullWidthContainer>
+              <Products></Products>
+              {/* <Image style={{ width: '100%' }} imageKey="hero-image"></Image> */}
+
+              <Afspraak></Afspraak>
             </Main>
           </Layout>
         </TranslationContext.Provider>
@@ -37,9 +70,7 @@ const IndexPage = ({ translations, pics, seo }: IndexPageProps) => {
   );
 };
 
-const Main = styled.main`
-  background: var(--background-dark);
-`;
+const Main = styled.main``;
 
 export const getStaticProps = async () => {
   const data = await getDataFromAirtable();
