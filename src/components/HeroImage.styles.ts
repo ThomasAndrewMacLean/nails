@@ -12,4 +12,5 @@ export const HeroImageWrapper = styled.div<{ imgUrl: string }>`
   background-image: ${(props) => `url(${props.imgUrl})`};
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
 `;
