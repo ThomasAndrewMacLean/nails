@@ -1,6 +1,5 @@
 require('dotenv').config();
 // const withPWA = require('next-pwa');
-//const withCSS = require('@zeit/next-css');
 const webpack = require('webpack');
 
 const isProduction = process.env.NODE_ENV === 'production';
