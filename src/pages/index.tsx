@@ -52,7 +52,7 @@ const IndexPage = ({ translations, pics, seo }: IndexPageProps) => {
               >
                 <InnerContainer>
                   <p>
-                    <T translationKey="introTekst" />
+                    <T translationKey="introText" />
                   </p>
                   <Button style={{ marginTop: '2rem' }} href="#maak-afspraak">
                     maak afspraak
