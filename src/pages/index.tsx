@@ -10,10 +10,9 @@ import {
   Button,
   SEO,
   FullWidthContainer,
-  InnerContainer,
   HeroImage,
 } from '../components';
-
+import { InnerContainer } from '../styles/container';
 import {
   TranslationContext,
   PictureContext,
@@ -51,9 +50,8 @@ const IndexPage = ({ translations, pics, seo }: IndexPageProps) => {
                 textColor="var(--text-grey)"
               >
                 <InnerContainer>
-                  <p>
-                    <T translationKey="introText" />
-                  </p>
+                  <T translationKey="introText" />
+
                   <Button style={{ marginTop: '2rem' }} href="#maak-afspraak">
                     maak afspraak
                   </Button>

@@ -2,7 +2,8 @@ import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import { T, FullWidthContainer, InnerContainer } from '.';
+import { T, FullWidthContainer } from '.';
+import { InnerContainer } from '../styles/container';
 // import { prefix } from '../utils';
 // import { pages } from '../constants/pages';
 
