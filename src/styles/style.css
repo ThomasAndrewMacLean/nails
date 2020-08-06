@@ -31,6 +31,8 @@ body {
   color: var(--text-dark);
   width: 100%;
   overflow-x: hidden;
+  --scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 ul {
   margin-left: 2rem;

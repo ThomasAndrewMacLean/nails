@@ -8,6 +8,12 @@ export const LinkButton = styled.a`
   display: inline-block;
   text-decoration: none;
   color: inherit;
+  transition: all 250ms ease-out;
+
+  &:hover {
+    background: var(--background-dark);
+    color: white;
+  }
 `;
 
 export const NormalButton = styled.button`

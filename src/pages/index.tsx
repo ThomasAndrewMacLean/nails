@@ -39,7 +39,6 @@ const IndexPage = ({ translations, pics, seo }: IndexPageProps) => {
           <Layout page="home">
             <Main>
               <SEO seo={seo}></SEO>
-              <HeroImage></HeroImage>
               <FullWidthContainer
                 style={{
                   fontSize: '1.2rem',
@@ -60,6 +59,9 @@ const IndexPage = ({ translations, pics, seo }: IndexPageProps) => {
                   </Button>
                 </InnerContainer>
               </FullWidthContainer>
+
+              <HeroImage></HeroImage>
+
               <Products></Products>
               {/* <Image style={{ width: '100%' }} imageKey="hero-image"></Image> */}
 

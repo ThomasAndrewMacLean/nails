@@ -1,10 +1,7 @@
 import styled from 'styled-components';
 
 export const HeroImageWrapper = styled.div<{ imgUrl: string }>`
-  position: absolute;
-  top: -4rem;
-  left: 0;
-  height: 60vh;
+  height: 50vh;
   overflow: hidden;
   width: 100vw;
   z-index: -1;
