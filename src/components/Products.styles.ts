@@ -5,6 +5,7 @@ export const ProductsWrapper = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 2rem;
   margin-top: 6rem;
+  margin-bottom: 8rem;
 
   @media (max-width: 1000px) {
     grid-template-columns: 1fr;

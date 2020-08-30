@@ -3,7 +3,7 @@ import * as Styles from './Button.styles';
 
 type PropsType = { href?: string; children: ReactNode; style?: Object };
 const Button = ({ href, children, style }: PropsType) => {
-  if (href) {
+  if (href !== undefined || href !== null) {
     return (
       <Styles.LinkButton style={style} href={href}>
         {children}

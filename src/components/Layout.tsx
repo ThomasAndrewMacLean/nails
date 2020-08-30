@@ -1,17 +1,39 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import { T, FullWidthContainer } from '.';
+import { T, FullWidthContainer, Button } from '.';
 import { InnerContainer } from '../styles/container';
-// import { prefix } from '../utils';
-// import { pages } from '../constants/pages';
+import { prefix } from '../utils';
+import { pages } from '../constants/pages';
 
 type LayoutProps = {
   children: ReactNode;
   page: string;
 };
-const Layout = ({ children }: LayoutProps) => {
+const Layout = ({ children, page }: LayoutProps) => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const refMenu = useRef(null);
+
+  const toggleMenu = () => {
+    const body = document.querySelector('body');
+    if (menuOpen) {
+      body!.style.height = 'auto';
+      body!.style.overflowY = 'inherit';
+    } else {
+      body!.style.height = '100vh';
+      body!.style.overflowY = 'hidden';
+    }
+
+    setMenuOpen(!menuOpen);
+  };
+
+  useEffect(() => {
+    if (refMenu && refMenu.current) {
+      // @ts-ignore
+      refMenu.current.style.opacity = '1';
+    }
+  }, [refMenu, refMenu.current, menuOpen]);
   return (
     <Main>
       <Header>
@@ -19,21 +41,30 @@ const Layout = ({ children }: LayoutProps) => {
           <T translationKey="title"></T>
           <T translationKey="subTitle"></T>
         </div>
-        {/* <nav>
-          <ul>
-            {pages
-              .filter((p) => p.showInNav)
-              .map((pag, i) => {
-                return (
-                  <li key={i}>
-                    <NavLink active={page === pag.id} href={prefix + pag.url}>
-                      <T translationKey={pag.id + 'Title'}></T>
-                    </NavLink>
-                  </li>
-                );
-              })}
-          </ul>
-        </nav> */}
+        <span className="menu" onClick={toggleMenu}>
+          🍔
+        </span>
+        {menuOpen && (
+          <nav ref={refMenu}>
+            <div className="titleWrap">
+              <T translationKey="title"></T>
+              <T translationKey="subTitle"></T>
+            </div>
+            <ul>
+              {pages
+                .filter((p) => p.showInNav)
+                .map((pag, i) => {
+                  return (
+                    <li key={i}>
+                      <Button href={prefix + pag.url}>
+                        <T translationKey={pag.id + 'Title'}></T>
+                      </Button>
+                    </li>
+                  );
+                })}
+            </ul>
+          </nav>
+        )}
       </Header>
       {children}
       <FullWidthContainer textColor="white" backgroundColor="var(--text-dark)">
@@ -79,15 +110,45 @@ const Header = styled.header`
   }
   display: flex;
   justify-content: center;
-  padding: 4rem 0;
-  margin-top: 2rem;
+  padding: 1rem 0;
+  /* margin-top: 2rem; */
   background-color: #ffffffaa;
+  .menu {
+    position: absolute;
+    right: 2rem;
+    top: 4rem;
+    z-index: 99;
+  }
   nav {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--background-light);
+    z-index: 9;
+    transition: opacity 200ms ease-out;
+    h2 {
+      text-align: left;
+    }
+    .titleWrap {
+      padding: 4rem;
+      position: absolute;
+      background: white;
+      width: 100vw;
+    }
   }
   ul {
     flex-direction: row;
     display: flex;
     list-style: none;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 
     li {
       margin: 0 1rem;
@@ -95,18 +156,18 @@ const Header = styled.header`
   }
 `;
 
-// const NavLink = styled.a<{ active: boolean }>`
-//   text-decoration: none;
-//   color: unset;
-//   position: relative;
-//   &:after {
-//     content: '';
-//     display: ${(props) => (props.active ? 'block' : 'none')};
-//     width: 100%;
-//     height: 3px;
-//     background: black;
-//   }
-// `;
+const NavLink = styled.a<{ active: boolean }>`
+  text-decoration: none;
+  color: unset;
+  position: relative;
+  &:after {
+    content: '';
+    display: ${(props) => (props.active ? 'block' : 'none')};
+    width: 100%;
+    height: 3px;
+    background: black;
+  }
+`;
 const Footer = styled.footer`
   display: flex;
   justify-content: space-between;

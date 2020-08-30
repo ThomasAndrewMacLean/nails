@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { TranslationsType, ImagesType, SEOType } from '../types';
 
-import { Layout, SEO } from '../components';
+import { Layout, SEO, Afspraak } from '../components';
 
 import {
   TranslationContext,
@@ -11,15 +11,25 @@ import {
 } from '../utils/contexts';
 import { getDataFromAirtable } from '../utils';
 
-const ContactPage = ({ translations, pics, seo }: ContactPageProps) => {
+const AfspraakPage = ({ translations, pics, seo }: AfspraakPageProps) => {
+  useEffect(() => {
+    const head = document.querySelector('head');
+    const script = document.createElement('script');
+    script.setAttribute(
+      'src',
+      'https://assets.calendly.com/assets/external/widget.js'
+    );
+    head!.appendChild(script);
+  }, []);
   return (
     <PictureContext.Provider value={pics}>
       <SEOContext.Provider value={seo}>
         <TranslationContext.Provider value={translations}>
-          <Layout page="contact">
+          <Layout page="afspraak">
             <Main>
               <SEO seo={seo}></SEO>
-              <h1>Contact</h1>
+              {/* <h1>Afspraak</h1> */}
+              <Afspraak></Afspraak>
             </Main>
           </Layout>
         </TranslationContext.Provider>
@@ -28,9 +38,7 @@ const ContactPage = ({ translations, pics, seo }: ContactPageProps) => {
   );
 };
 
-const Main = styled.main`
-  background: var(--background-dark);
-`;
+const Main = styled.main``;
 
 export const getStaticProps = async () => {
   const data = await getDataFromAirtable();
@@ -42,9 +50,9 @@ export const getStaticProps = async () => {
     },
   };
 };
-type ContactPageProps = {
+type AfspraakPageProps = {
   translations: TranslationsType[];
   pics: ImagesType[];
   seo: SEOType[];
 };
-export default ContactPage;
+export default AfspraakPage;

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 // import PropTypes from 'prop-types';
 
@@ -22,15 +22,7 @@ import { getDataFromAirtable } from '../utils';
 import { TranslationsType, ImagesType, SEOType } from '../types';
 
 const IndexPage = ({ translations, pics, seo }: IndexPageProps) => {
-  useEffect(() => {
-    const head = document.querySelector('head');
-    const script = document.createElement('script');
-    script.setAttribute(
-      'src',
-      'https://assets.calendly.com/assets/external/widget.js'
-    );
-    head!.appendChild(script);
-  }, []);
+  
   return (
     <PictureContext.Provider value={pics}>
       <SEOContext.Provider value={seo}>
@@ -58,12 +50,12 @@ const IndexPage = ({ translations, pics, seo }: IndexPageProps) => {
                 </InnerContainer>
               </FullWidthContainer>
 
-              <HeroImage></HeroImage>
+              {/* <HeroImage></HeroImage> */}
 
-              <Products></Products>
+              {/* <Products></Products> */}
               {/* <Image style={{ width: '100%' }} imageKey="hero-image"></Image> */}
 
-              <Afspraak></Afspraak>
+              {/* <Afspraak></Afspraak> */}
             </Main>
           </Layout>
         </TranslationContext.Provider>
