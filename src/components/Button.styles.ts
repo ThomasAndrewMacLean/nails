@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const LinkButton = styled.a`
-  border-radius: 5px;
+  border-radius: 0px;
   font-size: inherit;
   font-family: inherit;
   background-color: white;

@@ -71,6 +71,11 @@ const Layout = ({ children }: LayoutProps) => {
         )}
       </Header>
       {children}
+
+      <Image
+        imageKey="logo-small"
+        style={{ display: 'block', margin: '1rem auto 5rem' }}
+      ></Image>
       <FullWidthContainer textColor="white" backgroundColor="var(--text-dark)">
         <InnerContainer>
           <Footer>
@@ -147,7 +152,8 @@ const Header = styled.header`
       position: absolute;
       height: 9px;
       width: 100%;
-      background: #d3531a;
+
+      background: var(--background-highlight);
       border-radius: 9px;
       opacity: 1;
       left: 0;
@@ -232,7 +238,7 @@ const Header = styled.header`
     }
   }
   ul {
-    flex-direction: row;
+    flex-direction: column;
     display: flex;
     list-style: none;
     margin: auto;
