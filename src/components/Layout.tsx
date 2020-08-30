@@ -45,7 +45,7 @@ const Layout = ({ children }: LayoutProps) => {
             <span></span>
           </div>
         </div>
-        <a href="/" className="titleWrapMain">
+        <a href={prefix + '/'} className="titleWrapMain">
           <Image imageKey="logo" style={{ width: '375px' }}></Image>
           <T translationKey="subTitle"></T>
         </a>
