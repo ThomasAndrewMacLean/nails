@@ -2,7 +2,7 @@ import React, { ReactNode, useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import { T, FullWidthContainer, Button } from '.';
+import { T, FullWidthContainer, Button, Image } from '.';
 import { InnerContainer } from '../styles/container';
 import { prefix } from '../utils';
 import { pages } from '../constants/pages';
@@ -37,18 +37,22 @@ const Layout = ({ children, page }: LayoutProps) => {
   return (
     <Main>
       <Header>
-        <div>
-          <T translationKey="title"></T>
+        <div className="titleWrap">
+          <Image imageKey="logo" style={{ width: '375px' }}></Image>
           <T translationKey="subTitle"></T>
         </div>
         <span className="menu" onClick={toggleMenu}>
-          🍔
+          <div id="nav-icon3" className={menuOpen ? 'open' : ''}>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </span>
         {menuOpen && (
           <nav ref={refMenu}>
             <div className="titleWrap">
-              <T translationKey="title"></T>
-              <T translationKey="subTitle"></T>
+              <Image imageKey="logo" style={{ width: '175px' }}></Image>
             </div>
             <ul>
               {pages
@@ -116,8 +120,86 @@ const Header = styled.header`
   .menu {
     position: absolute;
     right: 2rem;
-    top: 4rem;
+    top: -1rem;
     z-index: 99;
+    transform: scale(0.5);
+    #nav-icon1,
+    #nav-icon2,
+    #nav-icon3,
+    #nav-icon4 {
+      width: 60px;
+      height: 45px;
+      position: relative;
+      margin: 50px auto;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: 0.5s ease-in-out;
+      -moz-transition: 0.5s ease-in-out;
+      -o-transition: 0.5s ease-in-out;
+      transition: 0.5s ease-in-out;
+      cursor: pointer;
+    }
+
+    #nav-icon1 span,
+    #nav-icon3 span,
+    #nav-icon4 span {
+      display: block;
+      position: absolute;
+      height: 9px;
+      width: 100%;
+      background: #d3531a;
+      border-radius: 9px;
+      opacity: 1;
+      left: 0;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: 0.25s ease-in-out;
+      -moz-transition: 0.25s ease-in-out;
+      -o-transition: 0.25s ease-in-out;
+      transition: 0.25s ease-in-out;
+    }
+    #nav-icon3 span:nth-child(1) {
+      top: 0px;
+    }
+
+    #nav-icon3 span:nth-child(2),
+    #nav-icon3 span:nth-child(3) {
+      top: 18px;
+    }
+
+    #nav-icon3 span:nth-child(4) {
+      top: 36px;
+    }
+
+    #nav-icon3.open span:nth-child(1) {
+      top: 18px;
+      width: 0%;
+      left: 50%;
+    }
+
+    #nav-icon3.open span:nth-child(2) {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+
+    #nav-icon3.open span:nth-child(3) {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+
+    #nav-icon3.open span:nth-child(4) {
+      top: 18px;
+      width: 0%;
+      left: 50%;
+    }
   }
   nav {
     opacity: 0;
@@ -137,6 +219,9 @@ const Header = styled.header`
       position: absolute;
       background: white;
       width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
   ul {
