@@ -1,82 +1,40 @@
-import React, { ReactNode, useState, useRef, useEffect } from 'react';
+import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import { T, FullWidthContainer, Button, Image } from '.';
+import { T, FullWidthContainer, Image } from '.';
 import { InnerContainer } from '../styles/container';
 import { prefix } from '../utils';
-import { pages } from '../constants/pages';
 
 type LayoutProps = {
   children: ReactNode;
   page: string;
 };
 const Layout = ({ children }: LayoutProps) => {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const refMenu = useRef(null);
-
-  const toggleMenu = () => {
-    const body = document.querySelector('body');
-    if (menuOpen) {
-      body!.style.height = 'auto';
-      body!.style.overflowY = 'inherit';
-    } else {
-      body!.style.height = '100vh';
-      body!.style.overflowY = 'hidden';
-    }
-
-    setMenuOpen(!menuOpen);
-  };
-
-  useEffect(() => {
-    if (refMenu && refMenu.current) {
-      // @ts-ignore
-      refMenu.current.style.opacity = '1';
-    }
-  }, [refMenu, refMenu.current, menuOpen]);
   return (
     <Main>
-      <Header>
-        <div className="menu" onClick={toggleMenu}>
-          <div id="nav-icon3" className={menuOpen ? 'open' : ''}>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-        <a href={prefix + '/'} className="titleWrapMain">
-          <Image imageKey="logo" style={{ width: '375px' }}></Image>
-          <T translationKey="subTitle"></T>
-        </a>
-        {menuOpen && (
-          <nav ref={refMenu}>
-            <div className="titleWrap">
-              <Image imageKey="logo" style={{ width: '175px' }}></Image>
-            </div>
-            <ul>
-              {pages
-                .filter((p) => p.showInNav)
-                .map((pag, i) => {
-                  return (
-                    <li key={i}>
-                      <Button href={prefix + pag.url}>
-                        <T translationKey={pag.id + 'Title'}></T>
-                      </Button>
-                    </li>
-                  );
-                })}
-            </ul>
-          </nav>
-        )}
-      </Header>
+      <FullWidthContainer textColor="black" backgroundColor="white">
+        <InnerContainer>
+          <Header>
+            <a href={prefix + '/'} className="titleWrapMain">
+              <Image imageKey="logo" style={{ width: '375px' }}></Image>
+              <T translationKey="subTitle"></T>
+            </a>
+          </Header>
+        </InnerContainer>
+      </FullWidthContainer>
+
       {children}
 
       <Image
         imageKey="logo-small"
-        style={{ display: 'block', margin: '1rem auto 5rem' }}
+        style={{
+          display: 'block',
+          margin: '1rem auto 5rem',
+          filter: 'drop-shadow(0px 0px 14px white)',
+        }}
       ></Image>
-      <FullWidthContainer textColor="white" backgroundColor="var(--text-dark)">
+      {/* <FullWidthContainer textColor="white" backgroundColor="var(--text-dark)">
         <InnerContainer>
           <Footer>
             <address>
@@ -94,7 +52,7 @@ const Layout = ({ children }: LayoutProps) => {
             </div>
           </Footer>
         </InnerContainer>
-      </FullWidthContainer>
+      </FullWidthContainer> */}
     </Main>
   );
 };
@@ -105,6 +63,8 @@ const Main = styled.main`
   max-width: 900px;
 `;
 const Header = styled.header`
+  background: white;
+
   h1 {
     font-weight: 100;
     font-size: 5rem;
@@ -122,7 +82,9 @@ const Header = styled.header`
   flex-direction: column;
   padding: 1rem 0;
   /* margin-top: 2rem; */
-
+  img {
+    filter: drop-shadow(0px 0px 14px white);
+  }
   .menu {
     z-index: 99;
     transform: scale(0.5);
