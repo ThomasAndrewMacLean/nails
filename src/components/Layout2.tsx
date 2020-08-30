@@ -228,21 +228,21 @@ const Header = styled.header`
 //     background: black;
 //   }
 // `;
-const Footer = styled.footer`
-  display: flex;
-  justify-content: space-between;
-  padding: 4rem 0;
+// const Footer = styled.footer`
+//   display: flex;
+//   justify-content: space-between;
+//   padding: 4rem 0;
 
-  ul {
-    text-align: right;
-    list-style: none;
-  }
+//   ul {
+//     text-align: right;
+//     list-style: none;
+//   }
 
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-`;
+//   a {
+//     text-decoration: none;
+//     color: inherit;
+//   }
+// `;
 
 Layout.propTypes = {
   children: PropTypes.oneOfType([
