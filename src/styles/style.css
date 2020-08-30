@@ -3,9 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,400;0,700&display=swap');
 
 :root {
-  --background-dark: #947520;
-  --background-light: #f7eccd;
-  --background-opaque: #f7eccdcb;
+  --background-dark: #102c2e;
+  --background-light: #e6d4c8;
+  --background-highlight: #f24f64;
   --text-dark: #333;
   --text-grey: #666;
   --border: 3px solid black;

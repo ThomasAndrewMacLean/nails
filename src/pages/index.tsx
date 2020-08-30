@@ -3,13 +3,13 @@ import styled from 'styled-components';
 // import PropTypes from 'prop-types';
 
 import {
+  Home,
   T,
- 
   Layout,
   Button,
   SEO,
   FullWidthContainer,
- } from '../components';
+} from '../components';
 import { InnerContainer } from '../styles/container';
 import {
   TranslationContext,
@@ -20,7 +20,6 @@ import { getDataFromAirtable } from '../utils';
 import { TranslationsType, ImagesType, SEOType } from '../types';
 
 const IndexPage = ({ translations, pics, seo }: IndexPageProps) => {
-  
   return (
     <PictureContext.Provider value={pics}>
       <SEOContext.Provider value={seo}>
@@ -28,7 +27,7 @@ const IndexPage = ({ translations, pics, seo }: IndexPageProps) => {
           <Layout page="home">
             <Main>
               <SEO seo={seo}></SEO>
-              <FullWidthContainer
+              {/* <FullWidthContainer
                 style={{
                   fontSize: '1.2rem',
                   textAlign: 'center',
@@ -46,8 +45,8 @@ const IndexPage = ({ translations, pics, seo }: IndexPageProps) => {
                     maak afspraak
                   </Button>
                 </InnerContainer>
-              </FullWidthContainer>
-
+              </FullWidthContainer> */}
+              <Home></Home>
               {/* <HeroImage></HeroImage> */}
 
               {/* <Products></Products> */}
