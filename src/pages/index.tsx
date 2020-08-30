@@ -4,14 +4,13 @@ import styled from 'styled-components';
 
 import {
   Home,
-  T,
+   
   Layout,
-  Button,
+   
   SEO,
-  FullWidthContainer,
+  
 } from '../components';
-import { InnerContainer } from '../styles/container';
-import {
+ import {
   TranslationContext,
   PictureContext,
   SEOContext,
