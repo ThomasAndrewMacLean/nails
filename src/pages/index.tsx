@@ -4,14 +4,12 @@ import styled from 'styled-components';
 
 import {
   T,
-  Products,
-  Afspraak,
+ 
   Layout,
   Button,
   SEO,
   FullWidthContainer,
-  HeroImage,
-} from '../components';
+ } from '../components';
 import { InnerContainer } from '../styles/container';
 import {
   TranslationContext,
