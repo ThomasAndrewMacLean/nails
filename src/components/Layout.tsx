@@ -37,18 +37,18 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <Main>
       <Header>
-        <div className="titleWrap">
-          <Image imageKey="logo" style={{ width: '375px' }}></Image>
-          <T translationKey="subTitle"></T>
-        </div>
-        <span className="menu" onClick={toggleMenu}>
+        <div className="menu" onClick={toggleMenu}>
           <div id="nav-icon3" className={menuOpen ? 'open' : ''}>
             <span></span>
             <span></span>
             <span></span>
             <span></span>
           </div>
-        </span>
+        </div>
+        <a href="/" className="titleWrapMain">
+          <Image imageKey="logo" style={{ width: '375px' }}></Image>
+          <T translationKey="subTitle"></T>
+        </a>
         {menuOpen && (
           <nav ref={refMenu}>
             <div className="titleWrap">
@@ -114,13 +114,11 @@ const Header = styled.header`
   }
   display: flex;
   justify-content: center;
+  flex-direction: column;
   padding: 1rem 0;
   /* margin-top: 2rem; */
   background-color: #ffffffaa;
   .menu {
-    position: absolute;
-    right: 2rem;
-    top: -1rem;
     z-index: 99;
     transform: scale(0.5);
     #nav-icon1,
@@ -201,6 +199,14 @@ const Header = styled.header`
       left: 50%;
     }
   }
+  .titleWrapMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: inherit;
+    text-decoration: none;
+  }
   nav {
     opacity: 0;
     position: absolute;
@@ -216,6 +222,7 @@ const Header = styled.header`
     }
     .titleWrap {
       padding: 4rem;
+      padding-top: 12rem;
       position: absolute;
       background: white;
       width: 100vw;

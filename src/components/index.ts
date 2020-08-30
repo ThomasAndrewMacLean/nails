@@ -8,3 +8,4 @@ export { default as Card } from './Card';
 export { default as Afspraak } from './Afspraak'
 export { default as HeroImage } from './HeroImage'
 export { default as Button } from './Button'
+export { default as Home } from './Home'
