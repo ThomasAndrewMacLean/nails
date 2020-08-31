@@ -1,7 +1,6 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;400&display=swap'); */
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,400;0,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@300&display=swap');
 :root {
   --background-dark: #102c2e;
   --background-light: #e6d4c8;
@@ -28,7 +27,7 @@ p {
 } */
 html,
 body {
-  font-family: 'IBM Plex Serif', serif;
+  font-family: 'Roboto', sans-serif;
   color: var(--text-dark);
   width: 100%;
   overflow-x: hidden;

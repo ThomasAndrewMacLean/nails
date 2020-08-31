@@ -7,8 +7,8 @@ const Home = ({}: PropsType) => {
     <Styles.HomeWrapper>
       <div className="grid-container">
         <div className="verzorging">
-          <Image imageKey="verzorging"></Image>
           <Button>Verzorgingen</Button>
+          <Image imageKey="verzorging"></Image>
         </div>
         <div className="wie">
           Handen en nagels zeggen veel over een mens. Vooral vrouwen vinden hun
@@ -17,9 +17,10 @@ const Home = ({}: PropsType) => {
           voor elegantie, stijl en passie. Veerle volgt al jaren de trends op
           omtrent nagels, zelf draagt ze al jaren gelnagels. Bij “Fabulous V”
           kunt u terecht voor een manicure, gelnagels en gewoon lakken.
+          <br></br><br></br>   <Button>Maak een afspraak</Button>
         </div>
         <div className="afspraak">
-          <Button>Maak een afspraak</Button>
+          {/* <Button>Maak een afspraak</Button> */}
         </div>
         <div className="slogan">
           <p>remember</p>

@@ -10,7 +10,7 @@ export const LinkButton = styled.a`
   text-decoration: none;
   color: inherit;
   transition: all 250ms ease-out;
-
+  border: none;
   &:hover {
     background: var(--background-dark);
     color: white;
@@ -22,7 +22,7 @@ export const NormalButton = styled.button`
   border: 1px solid #ddd;
   background-color: white;
   padding: 8px 30px;
-
+  border: none;
   display: inline-block;
   text-decoration: none;
   color: inherit;

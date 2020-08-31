@@ -2,13 +2,13 @@ import styled from 'styled-components';
 
 export const HomeWrapper = styled.div`
   margin-top: 4rem;
-  margin-bottom: 8rem;
+  margin-bottom: 0rem;
   .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.2fr 1fr 1fr;
     gap: 50px;
-    grid-template-areas: 'wie verzorging verzorging verzorging' 'wie verzorging verzorging verzorging' 'afspraak afspraak slogan slogan' 'producten producten producten prijslijst' 'producten producten producten prijslijst';
+    grid-template-areas: 'wie wie verzorging verzorging' 'wie wie verzorging verzorging' 'producten producten producten slogan' 'producten producten producten prijslijst';
   }
 
   .verzorging {
@@ -24,13 +24,27 @@ export const HomeWrapper = styled.div`
       border-radius: 0;
       background: var(--background-dark);
       color: white;
+      text-align: right;
       padding: 1rem 0;
+      padding-right: 4rem;
     }
   }
 
   .wie {
     grid-area: wie;
-    line-height: 1.6rem;
+    line-height: 2rem;
+    margin-top: -9px;
+    text-align: right;
+
+    button {
+      display: block;
+      width: 75%;
+      border-radius: 0;
+      background: var(--background-highlight);
+      color: white;
+      padding: 1rem 0;
+      float: right;
+    }
   }
 
   .afspraak {
@@ -49,13 +63,12 @@ export const HomeWrapper = styled.div`
   }
 
   .slogan {
-    background: var(--background-light);
     grid-area: slogan;
     color: var(--background-dark);
     font-size: 2rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
+
+    align-items: flex-end;
     flex-direction: column;
     span {
       color: var(--background-highlight);
@@ -64,6 +77,7 @@ export const HomeWrapper = styled.div`
   }
 
   .producten {
+    margin-top: 3rem;
     grid-area: producten;
     img {
       width: 100%;
@@ -75,7 +89,9 @@ export const HomeWrapper = styled.div`
       border-radius: 0;
       background: var(--background-light);
       color: var(--background-dark);
+      text-align: right;
       padding: 1rem 0;
+      padding-right: 4rem;
     }
   }
 
