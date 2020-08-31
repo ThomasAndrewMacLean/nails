@@ -4,6 +4,7 @@ export const HomeWrapper = styled.div`
   margin-top: 4rem;
   margin-bottom: 0rem;
   .grid-container {
+    margin-bottom: 6rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 0.2fr 1fr 1fr;
@@ -67,10 +68,11 @@ export const HomeWrapper = styled.div`
     color: var(--background-dark);
     font-size: 2rem;
     display: flex;
-
+    text-align: right;
+    line-height: 3rem;
     align-items: flex-end;
     flex-direction: column;
-    span {
+    strong {
       color: var(--background-highlight);
       text-transform: uppercase;
     }
