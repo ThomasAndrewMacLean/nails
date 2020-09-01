@@ -4,7 +4,7 @@ export const ProductsWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 2rem;
-  margin-top: 12rem;
+  margin-top: 6rem;
   margin-bottom: 8rem;
 
   img {

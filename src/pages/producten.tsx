@@ -16,10 +16,12 @@ const ProductenPage = ({ translations, pics, seo }: ProductenPageProps) => {
     <PictureContext.Provider value={pics}>
       <SEOContext.Provider value={seo}>
         <TranslationContext.Provider value={translations}>
-          <Layout page="producten">
+          <Layout page="verzorgingen">
             <Main>
               <SEO seo={seo}></SEO>
-              <h1>Producten</h1>
+              <div className="titleWrap">
+                <h1>Producten</h1>
+              </div>
               <Products></Products>
             </Main>
           </Layout>
@@ -30,7 +32,28 @@ const ProductenPage = ({ translations, pics, seo }: ProductenPageProps) => {
 };
 
 const Main = styled.main`
-margin-top:4rem;`;
+  margin-top: 8rem;
+
+  .titleWrap {
+    margin-bottom: -10rem;
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    transform: translateX(100%);
+    align-items: flex-end;
+    h1 {
+      margin-bottom: -4rem;
+
+      padding-left: 1rem;
+      font-size: 1.4rem;
+    }
+    ul {
+      list-style: none;
+      text-align: right;
+      font-size: 1.2rem;
+    }
+  }
+`;
 
 export const getStaticProps = async () => {
   const data = await getDataFromAirtable();

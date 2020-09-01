@@ -172,7 +172,7 @@ const Header = styled.header`
     }
     .titleWrap {
       padding: 4rem;
-      padding-top: 8rem;
+      padding-top: 10rem;
       position: absolute;
       // background: white;
       width: 100vw;
