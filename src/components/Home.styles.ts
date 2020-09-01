@@ -37,13 +37,15 @@ export const HomeWrapper = styled.div`
     margin-top: -9px;
     text-align: right;
 
-    button {
+    a {
       display: block;
       width: 75%;
       border-radius: 0;
       background: var(--background-highlight);
       color: white;
       padding: 1rem 0;
+      display: flex;
+      justify-content: center;
       float: right;
     }
   }
@@ -72,9 +74,24 @@ export const HomeWrapper = styled.div`
     line-height: 3rem;
     align-items: flex-end;
     flex-direction: column;
+    display: flex;
+    justify-content: space-between;
     strong {
       color: var(--background-highlight);
       text-transform: uppercase;
+    }
+
+    a {
+      line-height: 2rem;
+      font-size: 1rem;
+      display: block;
+      width: 100%;
+      border-radius: 0;
+      background: var(--background-highlight);
+      color: white;
+      padding: 1rem 0;
+      display: flex;
+      justify-content: center;
     }
   }
 

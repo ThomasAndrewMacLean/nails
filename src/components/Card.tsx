@@ -1,10 +1,10 @@
 import React from 'react';
 import * as Styles from './Card.styles';
 import { T, Button } from './';
-type PropsType = { product: string };
-const Card = ({ product }: PropsType) => {
+type PropsType = { product: string; dark: boolean };
+const Card = ({ product, dark }: PropsType) => {
   return (
-    <Styles.CardWrapper>
+    <Styles.CardWrapper dark={dark}>
       <h3>
         <T translationKey={product + 'Title'}></T>
       </h3>

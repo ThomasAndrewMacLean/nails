@@ -10,6 +10,10 @@ export const FooterWrapper = styled.footer<{ inModal: boolean }>`
   bottom: ${(props) => props.inModal && '0'};
   padding: ${(props) => props.inModal && '4rem'};
 
+  img {
+    height: 25px;
+    opacity: 0.8;
+  }
   .whatsapp {
     font-size: 1.4rem;
     font-family: 'Playfair Display', serif;

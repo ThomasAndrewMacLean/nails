@@ -12,10 +12,14 @@ const Footer = ({ inModal }: PropsType) => {
         <ul>
           <li className="whatsapp">What-s-up on</li>
           <li>
-            <a href="#">facebook</a>
+            <a target="_blank" href="#">
+              <img src="./icon-facebook.svg" />
+            </a>
           </li>
           <li>
-            <a href="#">linkedin</a>
+            <a target="_blank" href="#">
+              <img src="./icon-instagram.svg" />
+            </a>
           </li>
         </ul>
       </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { TranslationsType, ImagesType, SEOType } from '../types';
 
-import { Layout, SEO } from '../components';
+import { Layout, SEO, Products } from '../components';
 
 import {
   TranslationContext,
@@ -11,7 +11,11 @@ import {
 } from '../utils/contexts';
 import { getDataFromAirtable } from '../utils';
 
-const VerzorgingenPage = ({ translations, pics, seo }: VerzorgingenPageProps) => {
+const VerzorgingenPage = ({
+  translations,
+  pics,
+  seo,
+}: VerzorgingenPageProps) => {
   return (
     <PictureContext.Provider value={pics}>
       <SEOContext.Provider value={seo}>
@@ -20,6 +24,7 @@ const VerzorgingenPage = ({ translations, pics, seo }: VerzorgingenPageProps) =>
             <Main>
               <SEO seo={seo}></SEO>
               <h1>Verzorgingen</h1>
+              <Products></Products>
             </Main>
           </Layout>
         </TranslationContext.Provider>
@@ -29,7 +34,7 @@ const VerzorgingenPage = ({ translations, pics, seo }: VerzorgingenPageProps) =>
 };
 
 const Main = styled.main`
-  background: var(--background-dark);
+  margin-top:4rem;
 `;
 
 export const getStaticProps = async () => {
@@ -48,4 +53,3 @@ type VerzorgingenPageProps = {
   seo: SEOType[];
 };
 export default VerzorgingenPage;
-

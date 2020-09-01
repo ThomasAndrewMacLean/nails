@@ -7,20 +7,23 @@ const Home = ({}: PropsType) => {
     <Styles.HomeWrapper>
       <div className="grid-container">
         <div className="verzorging">
-          <Button>Verzorgingen</Button>
-          <Image imageKey="verzorging"></Image>
+          <a href="verzorgingen">
+            <Button>Verzorgingen</Button>
+            <Image imageKey="verzorging"></Image>
+          </a>
         </div>
         <div className="wie">
           <T translationKey="wieIsVeerle" />
           <br></br>
           <br></br>
-          <Button>
+          <Button href="afspraak">
             <T translationKey="maakEenAfspraak" />
           </Button>
         </div>
 
         <div className="slogan">
           <T translationKey="slogan" />
+          <Button href="prijzen">Prijslijst</Button>
         </div>
         <div className="producten">
           <Button>Producten</Button>
@@ -28,7 +31,6 @@ const Home = ({}: PropsType) => {
         </div>
         <div className="prijslijst">
           <Newsletter />
-          {/* <Button>Prijslijst</Button> */}
         </div>
       </div>
     </Styles.HomeWrapper>

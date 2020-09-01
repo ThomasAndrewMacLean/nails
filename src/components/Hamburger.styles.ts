@@ -70,6 +70,7 @@ export const HamburgerWrapper = styled.div`
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
+    background: var(--background-dark);
   }
 
   #nav-icon3.open span:nth-child(3) {
@@ -77,6 +78,7 @@ export const HamburgerWrapper = styled.div`
     -moz-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg);
+    background: var(--background-dark);
   }
 
   #nav-icon3.open span:nth-child(4) {

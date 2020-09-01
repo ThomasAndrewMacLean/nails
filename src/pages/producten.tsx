@@ -29,7 +29,8 @@ const ProductenPage = ({ translations, pics, seo }: ProductenPageProps) => {
   );
 };
 
-const Main = styled.main``;
+const Main = styled.main`
+margin-top:4rem;`;
 
 export const getStaticProps = async () => {
   const data = await getDataFromAirtable();

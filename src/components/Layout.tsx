@@ -45,7 +45,7 @@ const Layout = ({ children, page }: LayoutProps) => {
             background: var(--background-dark);
           }
           h2{
-            color: white !important;
+            color: white;
 
           }
           .white img{
@@ -67,7 +67,7 @@ const Layout = ({ children, page }: LayoutProps) => {
         </a>
         {menuOpen && (
           <nav ref={refMenu}>
-            <div className="titleWrap">
+            <div className="titleWrap menuOpen">
               <div>
                 <Image imageKey="logo-zwart" style={{ width: '375px' }}></Image>
               </div>
@@ -154,11 +154,21 @@ const Header = styled.header`
     h2 {
       text-align: left;
     }
-
-    a {
-      background: var(--background-dark);
-      width: 300px;
-      color: white;
+    .menuOpen {
+      h2 {
+        color: var(--background-dark) !important;
+      }
+    }
+    .menu-links {
+      a {
+        background: var(--background-dark);
+        width: 300px;
+        color: white;
+      }
+      li:last-child {
+        // push afspraak bit away from the rest
+        padding-top: 2rem;
+      }
     }
     .titleWrap {
       padding: 4rem;

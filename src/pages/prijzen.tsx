@@ -29,7 +29,7 @@ const PrijzenPage = ({ translations, pics, seo }: PrijzenPageProps) => {
 };
 
 const Main = styled.main`
-  background: var(--background-dark);
+  margin-top:4rem;
 `;
 
 export const getStaticProps = async () => {

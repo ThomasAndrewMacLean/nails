@@ -7,6 +7,9 @@ export const ProductsWrapper = styled.div`
   margin-top: 6rem;
   margin-bottom: 8rem;
 
+  strong {
+    font-size: 1.5rem;
+  }
   @media (max-width: 1000px) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;

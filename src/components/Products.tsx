@@ -1,14 +1,22 @@
 import React from 'react';
 import * as Styles from './Products.styles';
 import { producten } from '../constants';
-import { Card } from './';
+import { Card, Newsletter } from './';
+
 type PropsType = {};
 const Products = ({}: PropsType) => {
   return (
     <Styles.ProductsWrapper>
-      {producten.map((product) => {
-        return <Card key={product} product={product}></Card>;
+      {producten.map((product, i) => {
+        return (
+          <Card
+            dark={false && i % 2 === 0}
+            key={product}
+            product={product}
+          ></Card>
+        );
       })}
+      <Newsletter></Newsletter>
     </Styles.ProductsWrapper>
   );
 };

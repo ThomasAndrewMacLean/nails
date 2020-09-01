@@ -22,6 +22,9 @@
 p {
   line-height: 2rem;
 }
+a {
+  text-decoration: none;
+}
 /* ::selection {
   background: var(--background-light);  
 } */
