@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Head from 'next/head';
 
-import { T, FullWidthContainer, Button, Image, Hamburger } from '.';
+import { T, FullWidthContainer, Button, Image, Hamburger, Footer } from '.';
 import { InnerContainer } from '../styles/container';
 import { prefix } from '../utils';
 import { pages } from '../constants/pages';
@@ -75,7 +75,7 @@ const Layout = ({ children, page }: LayoutProps) => {
                 <T translationKey="subTitle"></T>
               </div>
             </div>
-            <ul>
+            <ul className="menu-links">
               {pages
                 .filter((p) => p.showInNav)
                 .map((pag, i) => {
@@ -88,6 +88,7 @@ const Layout = ({ children, page }: LayoutProps) => {
                   );
                 })}
             </ul>
+            <Footer inModal={true}></Footer>
           </nav>
         )}
       </Header>
@@ -100,22 +101,7 @@ const Layout = ({ children, page }: LayoutProps) => {
       </span>
       <FullWidthContainer textColor="var(--text-dark)" backgroundColor="white">
         <InnerContainer>
-          <Footer>
-            <address>
-              <T translationKey="address"></T>
-            </address>
-            <div>
-              <ul>
-                <li className="whatsapp">What-s-up on</li>
-                <li>
-                  <a href="#">facebook</a>
-                </li>
-                <li>
-                  <a href="#">linkedin</a>
-                </li>
-              </ul>
-            </div>
-          </Footer>
+          <Footer inModal={false}></Footer>
         </InnerContainer>
       </FullWidthContainer>
     </Main>
@@ -186,7 +172,7 @@ const Header = styled.header`
       align-items: center;
     }
   }
-  ul {
+  .menu-links {
     flex-direction: column;
     display: flex;
     list-style: none;
@@ -215,29 +201,6 @@ const Header = styled.header`
 //     background: black;
 //   }
 // `;
-const Footer = styled.footer`
-  display: flex;
-  justify-content: space-between;
-  padding: 4rem 0;
-
-  .whatsapp {
-    font-size: 1.4rem;
-    font-family: 'Playfair Display', serif;
-  }
-  address {
-    font-style: inherit;
-  }
-
-  ul {
-    text-align: right;
-    list-style: none;
-  }
-
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-`;
 
 Layout.propTypes = {
   children: PropTypes.oneOfType([
