@@ -11,3 +11,5 @@ export { default as HeroImage } from './HeroImage';
 export { default as Button } from './Button';
 export { default as Home } from './Home';
 export { default as Newsletter } from './Newsletter'
+export { default as Footer } from './Footer'
+export { default as Hamburger } from './Hamburger'
