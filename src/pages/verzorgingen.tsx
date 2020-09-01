@@ -42,10 +42,10 @@ const VerzorgingenPage = ({
 };
 
 const Main = styled.main`
-  margin-top: 4rem;
+  margin-top: 8rem;
 
   .titleWrap {
-    margin-bottom: -10rem;
+    margin-bottom: -16rem;
     display: flex;
     justify-content: space-between;
     width: 50%;
