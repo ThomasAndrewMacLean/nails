@@ -104,9 +104,9 @@ export const HomeWrapper = styled.div`
       display: block;
       width: 100%;
       border-radius: 0;
-      background: var(--background-highlight);
-      color: white;
-      padding: 1rem 0;
+      /* background: var(--background-light); */
+      color: var(--background-dark);
+      //padding: 1rem 0;
     }
   }
 `;

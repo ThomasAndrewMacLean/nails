@@ -1,6 +1,6 @@
 import React from 'react';
 import * as Styles from './Home.styles';
-import { Button, Image, T } from './';
+import { Button, Image, T, Newsletter } from './';
 type PropsType = {};
 const Home = ({}: PropsType) => {
   return (
@@ -20,14 +20,15 @@ const Home = ({}: PropsType) => {
         </div>
 
         <div className="slogan">
-          <T translationKey="slogan"/>
+          <T translationKey="slogan" />
         </div>
         <div className="producten">
           <Button>Producten</Button>
           <Image imageKey="producten"></Image>
         </div>
         <div className="prijslijst">
-          <Button>Prijslijst</Button>
+          <Newsletter />
+          {/* <Button>Prijslijst</Button> */}
         </div>
       </div>
     </Styles.HomeWrapper>

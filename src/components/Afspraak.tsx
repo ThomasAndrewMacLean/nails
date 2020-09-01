@@ -7,7 +7,7 @@ const Afspraak = ({}: PropsType) => {
     <Styles.AfspraakWrapper id="maak-afspraak">
       <div
         className="calendly-inline-widget"
-        data-url="https://calendly.com/thomas-maclean/afspraak?hide_event_type_details=1&primary_color=deb84d"
+        data-url="https://calendly.com/thomas-maclean/afspraak?hide_event_type_details=1&primary_color=0f2d2f"
         style={{ minWidth: '320px', height: '1000px' }}
       ></div>
     </Styles.AfspraakWrapper>
