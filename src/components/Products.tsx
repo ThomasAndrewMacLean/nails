@@ -1,6 +1,5 @@
 import React from 'react';
 import * as Styles from './Products.styles';
-import { producten } from '../constants';
 import { Card, Newsletter, Button, Image } from './';
 
 type PropsType = {};
