@@ -47,18 +47,18 @@ const Layout = ({ children, page }: LayoutProps) => {
 
         <a href={prefix + '/'} className="titleWrapMain">
           <span className="white">
-            <Image imageKey="logo-zwart" style={{ width: '375px' }}></Image>
+            <Image imageKey="logo-single-page" style={{ width: '375px' }}></Image>
           </span>
-          <T translationKey="subTitle"></T>
+          {/* <T translationKey="subTitle"></T> */}
         </a>
         {menuOpen && (
           <nav ref={refMenu}>
             <div className="titleWrap menuOpen">
               <div>
-                <Image imageKey="logo-zwart" style={{ width: '375px' }}></Image>
+                <Image imageKey="logo-single-page" style={{ width: '375px' }}></Image>
               </div>
               <div>
-                <T translationKey="subTitle"></T>
+                {/* <T translationKey="subTitle"></T> */}
               </div>
             </div>
             <ul className="menu-links">

@@ -39,7 +39,7 @@ export default class MyDocument extends Document {
           ></script> */}
           <script src="https://unpkg.com/smoothscroll-polyfill/dist/smoothscroll.min.js"></script>
           <script src="https://unpkg.com/smoothscroll-anchor-polyfill"></script>
-          
+      
         </Head>
         <body>
           <Main />
