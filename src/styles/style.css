@@ -2,7 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@300&display=swap');
 :root {
-  --background-dark: #102c2e;
+  --background-dark: #e2a041;
   --background-light: #e6d4c8;
   --background-highlight: #f24f64;
   --text-dark: #333;
@@ -36,6 +36,15 @@ body {
   overflow-x: hidden;
   --scroll-behavior: smooth;
   scroll-behavior: smooth;
+}
+html {
+  background-color: var(--background-dark);
+  padding: 0.5rem;
+}
+body {
+  min-height: calc(100vh - 1rem);
+  background-color: white;
+  color: #333;
 }
 ul {
   margin-left: 2rem;

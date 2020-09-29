@@ -22,7 +22,7 @@ const Layout = ({ children, page }: LayoutProps) => {
       body!.style.height = 'auto';
       body!.style.overflowY = 'inherit';
     } else {
-      body!.style.height = '100vh';
+      body!.style.height = 'calc(100vh - 1rem)';
       body!.style.overflowY = 'hidden';
     }
 
@@ -39,21 +39,7 @@ const Layout = ({ children, page }: LayoutProps) => {
     <Main>
       {page === 'afspraak' && (
         <Head>
-          <style
-            dangerouslySetInnerHTML={{
-              __html: `body{
-            background: var(--background-dark);
-          }
-          h2{
-            color: white;
-
-          }
-          .white img{
-            filter: invert(1);
-          }
-          `,
-            }}
-          ></style>
+          <style></style>
         </Head>
       )}
       <Header>
@@ -160,6 +146,8 @@ const Header = styled.header`
       }
     }
     .menu-links {
+      z-index: 999;
+      position: relative;
       a {
         background: var(--background-dark);
         width: 300px;
@@ -180,6 +168,7 @@ const Header = styled.header`
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      margin-top: 0.5rem;
     }
   }
   .menu-links {

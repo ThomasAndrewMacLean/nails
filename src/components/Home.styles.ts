@@ -67,7 +67,7 @@ export const HomeWrapper = styled.div`
 
   .slogan {
     grid-area: slogan;
-    color: var(--background-dark);
+    color: var(--text-dark);
     font-size: 2rem;
     display: flex;
     text-align: right;
@@ -78,7 +78,9 @@ export const HomeWrapper = styled.div`
     justify-content: space-between;
     strong {
       color: var(--background-highlight);
-      text-transform: uppercase;
+   
+    font-style: italic;
+  
     }
 
     a {

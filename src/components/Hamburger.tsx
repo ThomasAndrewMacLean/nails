@@ -4,23 +4,12 @@ import * as Styles from './Hamburger.styles';
 type PropsType = { page: string; toggleMenu: any; menuOpen: boolean };
 const Hamburger = ({ page, toggleMenu, menuOpen }: PropsType) => {
   return (
-    <Styles.HamburgerWrapper
-      className={page === 'afspraak' ? 'menu white' : 'menu'}
-      onClick={toggleMenu}
-    >
+    <Styles.HamburgerWrapper className={'menu'} onClick={toggleMenu}>
       <div id="nav-icon3" className={menuOpen ? 'open' : ''}>
-        <span
-          className={page === 'afspraak' && !menuOpen ? 'white' : ''}
-        ></span>
-        <span
-          className={page === 'afspraak' && !menuOpen ? 'white' : ''}
-        ></span>
-        <span
-          className={page === 'afspraak' && !menuOpen ? 'white' : ''}
-        ></span>
-        <span
-          className={page === 'afspraak' && !menuOpen ? 'white' : ''}
-        ></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </Styles.HamburgerWrapper>
   );

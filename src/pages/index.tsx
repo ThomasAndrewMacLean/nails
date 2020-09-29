@@ -2,15 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 // import PropTypes from 'prop-types';
 
+import { Home, Layout, SEO } from '../components';
 import {
-  Home,
-   
-  Layout,
-   
-  SEO,
-  
-} from '../components';
- import {
   TranslationContext,
   PictureContext,
   SEOContext,
@@ -26,32 +19,8 @@ const IndexPage = ({ translations, pics, seo }: IndexPageProps) => {
           <Layout page="home">
             <Main>
               <SEO seo={seo}></SEO>
-              {/* <FullWidthContainer
-                style={{
-                  fontSize: '1.2rem',
-                  textAlign: 'center',
-                  marginBottom: '8rem',
-                  marginTop: '6rem',
-                  padding: '4rem',
-                }}
-                backgroundColor="var(--background-light)"
-                textColor="var(--text-grey)"
-              >
-                <InnerContainer>
-                  <T translationKey="introText" />
 
-                  <Button style={{ marginTop: '2rem' }} href="#maak-afspraak">
-                    maak afspraak
-                  </Button>
-                </InnerContainer>
-              </FullWidthContainer> */}
               <Home></Home>
-              {/* <HeroImage></HeroImage> */}
-
-              {/* <Products></Products> */}
-              {/* <Image style={{ width: '100%' }} imageKey="hero-image"></Image> */}
-
-              {/* <Afspraak></Afspraak> */}
             </Main>
           </Layout>
         </TranslationContext.Provider>

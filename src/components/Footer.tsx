@@ -9,8 +9,8 @@ const Footer = ({ inModal }: PropsType) => {
         <T translationKey="address"></T>
       </address>
       <div>
+        <span className="whatsapp">What-s-up on</span>
         <ul>
-          <li className="whatsapp">What-s-up on</li>
           <li>
             <a target="_blank" href="#">
               <img src="./icon-facebook.svg" />

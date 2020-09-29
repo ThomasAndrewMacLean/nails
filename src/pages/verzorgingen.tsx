@@ -27,9 +27,15 @@ const VerzorgingenPage = ({
                 <h1>Verzorgingen</h1>
 
                 <ul>
-                  <li>Manicure</li>
-                  <li>Gelnagels</li>
-                  <li>Lakken</li>
+                  <li>
+                    <a href="#manicure">Manicure</a>
+                  </li>
+                  <li>
+                    <a href="#gelnagels">Gelnagels</a>
+                  </li>
+                  <li>
+                    <a href="#lakken">Lakken</a>
+                  </li>
                 </ul>
               </div>
               <Verzorgingen></Verzorgingen>
@@ -61,6 +67,10 @@ const Main = styled.main`
       list-style: none;
       text-align: right;
       font-size: 1.2rem;
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
     }
   }
 `;

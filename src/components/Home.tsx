@@ -22,13 +22,20 @@ const Home = ({}: PropsType) => {
         </div>
 
         <div className="slogan">
-          <T translationKey="slogan" />
+          <T
+            style={{
+              fontFamily: 'Playfair Display',
+              paddingTop: '5rem',
+              paddingBottom: '0rem',
+            }}
+            translationKey="slogan"
+          ></T>
           <Button href="prijzen">Prijslijst</Button>
         </div>
-        <div className="producten">
+        {/* <div className="producten">
           <Button>Producten</Button>
           <Image imageKey="producten"></Image>
-        </div>
+        </div> */}
         <div className="prijslijst">
           <Newsletter />
         </div>

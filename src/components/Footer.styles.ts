@@ -25,6 +25,12 @@ export const FooterWrapper = styled.footer<{ inModal: boolean }>`
   ul {
     text-align: right;
     list-style: none;
+    display:flex;
+    justify-content: flex-end;
+margin-top:1rem;
+li{
+  margin-left:1rem;
+}
   }
 
   a {
