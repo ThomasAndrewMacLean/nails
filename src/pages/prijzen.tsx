@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { TranslationsType, ImagesType, SEOType } from '../types';
 
 import { Layout, SEO, T } from '../components';
-
+import { producten } from '../constants';
 import {
   TranslationContext,
   PictureContext,
@@ -22,7 +22,19 @@ const PrijzenPage = ({ translations, pics, seo }: PrijzenPageProps) => {
               <h1>
                 <T translationKey="prijzenTitle"></T>
               </h1>
-              <T translationKey="prijzenTitle"></T>
+
+              <div className="prijsWrap">
+                {producten.map((p) => {
+                  return (
+                    <div className="prijsLine" key="p">
+                      <T translationKey={p + 'Title'}></T> :{' '}
+                      <strong>
+                        <T translationKey={p + 'Prijs'}></T>
+                      </strong>
+                    </div>
+                  );
+                })}
+              </div>
             </Main>
           </Layout>
         </TranslationContext.Provider>
@@ -33,6 +45,17 @@ const PrijzenPage = ({ translations, pics, seo }: PrijzenPageProps) => {
 
 const Main = styled.main`
   margin-top: 8rem;
+  text-align: center;
+  h1 {
+    margin-bottom: 2rem;
+  }
+  .prijsLine {
+    padding: 1rem 0;
+    font-size: 1.5rem;
+  }
+  .prijsWrap {
+    margin-bottom: 4rem;
+  }
 `;
 
 export const getStaticProps = async () => {
