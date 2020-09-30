@@ -6,13 +6,6 @@ import { Carousel } from 'react-responsive-carousel';
 
 type PropsType = {};
 const Products = ({}: PropsType) => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
   return (
     <Styles.ProductsWrapper>
       <div style={{ marginTop: '-4rem' }}>
