@@ -49,7 +49,7 @@ const Layout = ({ children, page }: LayoutProps) => {
           <span className="white">
             <Image
               imageKey="logo-single-page"
-              style={{ width: '375px' }}
+              style={{ width: '80vw', maxWidth: '375px' }}
             ></Image>
           </span>
           {/* <T translationKey="subTitle"></T> */}
@@ -159,6 +159,12 @@ const Header = styled.header`
         color: var(--text-dark);
         text-align: center;
         font-size: 20px;
+        transition: all 350ms ease;
+      }
+
+      a:hover {
+        background: var(--background-dark);
+        color: white;
       }
       li:last-child {
         // push afspraak bit away from the rest

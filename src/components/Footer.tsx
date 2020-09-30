@@ -9,15 +9,25 @@ const Footer = ({ inModal }: PropsType) => {
         <T translationKey="address"></T>
       </address>
       <div>
-        <span className="whatsapp">What-s-up on</span>
+        <span className="whatsapp">
+          <T translationKey="whatsUp"></T>
+        </span>
         <ul>
           <li>
-            <a target="_blank" href="#">
+            <a
+              target="_blank"
+              href="https://www.facebook.com/BeFabulousV"
+              rel="noopener noreferrer"
+            >
               <img src="./icon-facebook.svg" />
             </a>
           </li>
           <li>
-            <a target="_blank" href="#">
+            <a
+              target="_blank"
+              href="https://www.instagram.com/befabulousv"
+              rel="noopener noreferrer"
+            >
               <img src="./icon-instagram.svg" />
             </a>
           </li>

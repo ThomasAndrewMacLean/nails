@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const FooterWrapper = styled.footer<{ inModal: boolean }>`
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   padding: 4rem 0;
 
   position: ${(props) => props.inModal && 'absolute'};
@@ -11,7 +12,7 @@ export const FooterWrapper = styled.footer<{ inModal: boolean }>`
   padding: ${(props) => props.inModal && '4rem'};
 
   img {
-    height: 25px;
+    height: 18px;
     opacity: 0.8;
   }
   .whatsapp {
@@ -36,5 +37,23 @@ li{
   a {
     text-decoration: none;
     color: inherit;
+  }
+
+
+
+  @media only screen and (max-width: 600px) {
+   
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+address{
+  margin-top:2rem
+}
+    ul{
+      justify-content: center;
+      margin-left:0
+    }
   }
 `;
