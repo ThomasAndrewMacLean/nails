@@ -23,6 +23,24 @@ export const ProductsWrapper = styled.div`
     justify-content: center;
   }
 
+  .product0{
+    margin-top: 4rem;
+    padding-top:5rem;
+  }
+
+  .product1{
+    margin-top:-12rem;
+  }
+  .product2{
+    margin-top:-25rem;
+    margin-left:0;
+  }
+  .product3{
+    margin-left:0;
+  }
+  .niewsBrief{
+    margin-top:-25rem;
+  }
   strong {
     font-size: 1.5rem;
   }

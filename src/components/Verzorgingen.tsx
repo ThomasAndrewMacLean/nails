@@ -1,5 +1,5 @@
 import React from 'react';
-import * as Styles from './Products.styles';
+import * as Styles from './Verzorgingen.styles';
 import { producten } from '../constants';
 import { Card, Newsletter, Image } from './';
 import Slider from 'react-slick';
@@ -37,21 +37,21 @@ const Products = ({}: PropsType) => {
           <Image imageKey="hand4"></Image>
         </Slider>
       </div>
-      <div style={{ paddingTop: '4rem' }}>
+      <div className="product0">
         <Card dark={false} key={producten[0]} product={producten[0]}></Card>
       </div>
-      <div style={{ marginTop: '-12rem' }}>
+      <div className="product1">
         <Card dark={false} key={producten[1]} product={producten[1]}></Card>
       </div>
       <Image imageKey="v"></Image>
-      <div style={{ marginLeft: '0rem', marginTop: '-25rem' }}>
+      <div className="product2">
         <Card dark={false} key={producten[2]} product={producten[2]}></Card>
       </div>
 
-      <div style={{ marginLeft: '0rem' }}>
+      <div className="product3">
         <Card dark={false} key={producten[3]} product={producten[3]}></Card>
       </div>
-      <div style={{ marginTop: '-25rem' }}>
+      <div className="nieuwsBrief">
         <Newsletter></Newsletter>
       </div>
     </Styles.ProductsWrapper>
