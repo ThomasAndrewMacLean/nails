@@ -47,6 +47,8 @@ const Main = styled.main`
       padding-left: 1rem;
       font-size: 1.4rem;
     }
+
+    
     ul {
       list-style: none;
       text-align: right;

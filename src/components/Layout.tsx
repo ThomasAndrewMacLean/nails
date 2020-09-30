@@ -49,7 +49,7 @@ const Layout = ({ children, page }: LayoutProps) => {
           <span className="white">
             <Image
               imageKey="logo-single-page"
-              style={{ width: '80vw', maxWidth: '375px' }}
+              style={{ width: '80vw', maxWidth: '200px' }}
             ></Image>
           </span>
           {/* <T translationKey="subTitle"></T> */}
@@ -60,7 +60,7 @@ const Layout = ({ children, page }: LayoutProps) => {
               <div>
                 <Image
                   imageKey="logo-single-page"
-                  style={{ width: '375px' }}
+                  style={{ width: '80vw', maxWidth: '200px' }}
                 ></Image>
               </div>
               <div>{/* <T translationKey="subTitle"></T> */}</div>
@@ -86,7 +86,7 @@ const Layout = ({ children, page }: LayoutProps) => {
       <span className="white">
         <Image
           imageKey="logo-small"
-          style={{ display: 'block', margin: '1rem auto 5rem' }}
+          style={{ display: 'block', margin: '1rem auto 0rem' }}
         ></Image>
       </span>
       <FullWidthContainer textColor="var(--text-dark)" backgroundColor="white">

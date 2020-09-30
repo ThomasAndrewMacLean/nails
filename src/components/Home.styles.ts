@@ -17,8 +17,11 @@ export const HomeWrapper = styled.div`
     grid-area: verzorging;
 
     img {
+      
       width: 100%;
-      display: block;
+    display: block;
+    height: 300px;
+    object-fit: cover;
     }
     button {
       display: block;

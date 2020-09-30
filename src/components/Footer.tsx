@@ -1,6 +1,6 @@
 import React from 'react';
 import * as Styles from './Footer.styles';
-import { T } from './';
+import { T, Image } from './';
 type PropsType = { inModal: boolean };
 const Footer = ({ inModal }: PropsType) => {
   return (
@@ -19,7 +19,7 @@ const Footer = ({ inModal }: PropsType) => {
               href="https://www.facebook.com/BeFabulousV"
               rel="noopener noreferrer"
             >
-              <img src="./icon-facebook.svg" />
+              <Image imageKey="facebook" />
             </a>
           </li>
           <li>
@@ -28,7 +28,7 @@ const Footer = ({ inModal }: PropsType) => {
               href="https://www.instagram.com/befabulousv"
               rel="noopener noreferrer"
             >
-              <img src="./icon-instagram.svg" />
+              <Image imageKey="instagram" />
             </a>
           </li>
         </ul>

@@ -12,7 +12,12 @@ export const CardWrapper = styled.div<{ dark: boolean }>`
     margin-top: 1.5rem;
   }
 
+  .prijs{
+    font-weight: 700;
+    margin: 1.5rem 0 3rem;
+  }
   button {
+    margin-top:2rem;
     display: block;
     width: 100%;
     border-radius: 0;

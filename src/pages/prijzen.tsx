@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { TranslationsType, ImagesType, SEOType } from '../types';
 
-import { Layout, SEO } from '../components';
+import { Layout, SEO, T } from '../components';
 
 import {
   TranslationContext,
@@ -19,7 +19,10 @@ const PrijzenPage = ({ translations, pics, seo }: PrijzenPageProps) => {
           <Layout page="prijzen">
             <Main>
               <SEO seo={seo}></SEO>
-              <h1>Prijzen</h1>
+              <h1>
+                <T translationKey="prijzenTitle"></T>
+              </h1>
+              <T translationKey="prijzenTitle"></T>
             </Main>
           </Layout>
         </TranslationContext.Provider>
@@ -29,7 +32,7 @@ const PrijzenPage = ({ translations, pics, seo }: PrijzenPageProps) => {
 };
 
 const Main = styled.main`
-  margin-top:4rem;
+  margin-top: 8rem;
 `;
 
 export const getStaticProps = async () => {
@@ -48,4 +51,3 @@ type PrijzenPageProps = {
   seo: SEOType[];
 };
 export default PrijzenPage;
-

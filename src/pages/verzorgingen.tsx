@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { TranslationsType, ImagesType, SEOType } from '../types';
 
-import { Layout, SEO, Verzorgingen } from '../components';
+import { Layout, SEO, Verzorgingen, T } from '../components';
 
 import {
   TranslationContext,
@@ -21,20 +21,37 @@ const VerzorgingenPage = ({
       <SEOContext.Provider value={seo}>
         <TranslationContext.Provider value={translations}>
           <Layout page="verzorgingen">
-            <Main>
+            <Main className="verzorgingen">
               <SEO seo={seo}></SEO>
               <div className="titleWrap">
-                <h1>Verzorgingen</h1>
-
+                <div className="wrap">
+                  <h1>
+                    <T translationKey="verzorgingenTitle" />
+                  </h1>
+                  <h4>
+                    <T translationKey="verzorgingenSubTitle" />
+                  </h4>
+                </div>
                 <ul>
                   <li>
-                    <a href="#manicure">Manicure</a>
+                    <a href="#manicure">
+                      <T translationKey="manicureTitle" />
+                    </a>
                   </li>
                   <li>
-                    <a href="#gelnagels">Gelnagels</a>
+                    <a href="#gelnagels">
+                      <T translationKey="gelnagelsTitle" />
+                    </a>
                   </li>
                   <li>
-                    <a href="#lakken">Lakken</a>
+                    <a href="#lakken">
+                      <T translationKey="lakkenTitle" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#gellak">
+                      <T translationKey="gellakTitle" />
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -58,10 +75,16 @@ const Main = styled.main`
     transform: translateX(100%);
     align-items: flex-end;
     h1 {
-      padding-bottom: 24px;
+      padding-bottom: 10px;
 
       padding-left: 1rem;
       font-size: 1.4rem;
+    }
+    h4 {
+      margin-bottom: 2rem;
+
+      padding-left: 1rem;
+      font-size: 1rem;
     }
     ul {
       list-style: none;

@@ -1,15 +1,33 @@
 import React from 'react';
 import * as Styles from './Products.styles';
 import { producten } from '../constants';
-import { Card, Newsletter, Button, Image } from './';
-import { Carousel } from 'react-responsive-carousel';
+import { Card, Newsletter, Image } from './';
+import Slider from 'react-slick';
 
 type PropsType = {};
 const Products = ({}: PropsType) => {
+  const settings = {
+    dots: false,
+    fade: true,
+    infinite: true,
+    autoplay: true,
+    speed: 500,
+    autoplaySpeed: 5000,
+
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
   return (
     <Styles.ProductsWrapper>
-      <div style={{ marginTop: '-4rem' }}>
-        <Carousel autoPlay={true} showStatus={false}>
+      <div
+        style={{
+          marginTop: '-4rem',
+          width: '100%',
+          height: '266px',
+          overflow: 'hidden',
+        }}
+      >
+        <Slider {...settings}>
           <Image imageKey="hand1"></Image>
 
           <Image imageKey="hand5"></Image>
@@ -17,22 +35,23 @@ const Products = ({}: PropsType) => {
           <Image imageKey="hand3"></Image>
 
           <Image imageKey="hand4"></Image>
-        </Carousel>
+        </Slider>
       </div>
       <div style={{ paddingTop: '4rem' }}>
         <Card dark={false} key={producten[0]} product={producten[0]}></Card>
       </div>
       <div style={{ marginTop: '-12rem' }}>
         <Card dark={false} key={producten[1]} product={producten[1]}></Card>
-      </div>{' '}
-      <Image imageKey="producten"></Image>
-      <div style={{ marginLeft: '0rem' }}>
+      </div>
+      <Image imageKey="v"></Image>
+      <div style={{ marginLeft: '0rem', marginTop: '-25rem' }}>
         <Card dark={false} key={producten[2]} product={producten[2]}></Card>
       </div>
-      <div style={{ marginTop: '-4rem', marginLeft: 'auto', width: '75%' }}>
-        <Button href="prijzen">Prijslijst</Button>
-        <br />
-        <br />
+
+      <div style={{ marginLeft: '0rem' }}>
+        <Card dark={false} key={producten[3]} product={producten[3]}></Card>
+      </div>
+      <div style={{ marginTop: '-25rem' }}>
         <Newsletter></Newsletter>
       </div>
     </Styles.ProductsWrapper>

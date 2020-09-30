@@ -12,7 +12,7 @@ const Home = ({}: PropsType) => {
               <T translationKey="verzorgingen" />
               &nbsp; &rarr;
             </Button>
-            <Image imageKey="hand1"></Image>
+            <Image imageKey="v"></Image>
           </a>
         </div>
         <div className="wie">

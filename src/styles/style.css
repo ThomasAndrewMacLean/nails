@@ -4,6 +4,7 @@
 :root {
   --background-dark: #e2a041;
   --background-light: #e6d4c8;
+  /* --background-highlight: #e6341f; */
   --background-highlight: #f24f64;
   --text-dark: #333;
   --text-grey: #666;
@@ -58,4 +59,8 @@ li {
 .showKeys {
   background: pink !important;
   color: red !important;
+}
+
+.verzorgingen .titleWrap a {
+  font-size: 16px;
 }

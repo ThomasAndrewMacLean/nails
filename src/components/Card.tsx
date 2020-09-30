@@ -8,8 +8,11 @@ const Card = ({ product, dark }: PropsType) => {
       <h3 id={product.toLowerCase()}>
         <T translationKey={product + 'Title'}></T>
       </h3>
-
       <T translationKey={product + 'Text'}></T>
+
+      <div className="prijs">
+        <T translationKey={product + 'Prijs'}></T>
+      </div>
       <Button href="/afspraak">Maak een afspraak</Button>
     </Styles.CardWrapper>
   );
