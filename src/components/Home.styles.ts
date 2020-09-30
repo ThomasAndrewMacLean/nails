@@ -7,9 +7,9 @@ export const HomeWrapper = styled.div`
     margin-bottom: 6rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 0.2fr 1fr 1fr;
+    grid-template-rows: 1fr 0.2fr 1fr;
     gap: 50px;
-    grid-template-areas: 'wie wie verzorging verzorging' 'wie wie verzorging verzorging' 'producten producten producten slogan' 'producten producten producten prijslijst';
+    grid-template-areas: 'wie wie verzorging verzorging' 'wie wie verzorging verzorging' 'producten producten x slogan' 'producten producten x prijslijst';
   }
 
   .verzorging {
@@ -94,6 +94,7 @@ export const HomeWrapper = styled.div`
       padding: 1rem 0;
       display: flex;
       justify-content: center;
+      margin-top:4rem;
     }
   }
 
@@ -108,11 +109,11 @@ export const HomeWrapper = styled.div`
       display: block;
       width: 100%;
       border-radius: 0;
-      background: var(--background-light);
+      background: white;
       color: var(--background-dark);
-      text-align: right;
+      /* text-align: right; */
       padding: 1rem 0;
-      padding-right: 4rem;
+      /* padding-right: 4rem; */
     }
   }
 
@@ -125,7 +126,8 @@ export const HomeWrapper = styled.div`
       border-radius: 0;
       /* background: var(--background-light); */
       color: var(--background-dark);
-      //padding: 1rem 0;
+      
+      margin-top:4rem;
     }
   }
 `;

@@ -25,7 +25,7 @@ const Home = ({}: PropsType) => {
           <T
             style={{
               fontFamily: 'Playfair Display',
-              paddingTop: '5rem',
+              paddingTop: '1rem',
               paddingBottom: '0rem',
             }}
             translationKey="slogan"
@@ -36,7 +36,7 @@ const Home = ({}: PropsType) => {
           <Button>Producten</Button>
           <Image imageKey="producten"></Image>
         </div> */}
-        <div className="prijslijst">
+        <div className="producten">
           <Newsletter />
         </div>
       </div>
