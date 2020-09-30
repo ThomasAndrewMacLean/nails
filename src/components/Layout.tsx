@@ -153,9 +153,12 @@ const Header = styled.header`
       z-index: 999;
       position: relative;
       a {
-        background: var(--background-dark);
+        background: white;
         width: 300px;
-        color: white;
+        border: 2px solid var(--background-dark);
+        color: var(--text-dark);
+        text-align: center;
+        font-size: 20px;
       }
       li:last-child {
         // push afspraak bit away from the rest
