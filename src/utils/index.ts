@@ -4,8 +4,8 @@ export const add = (a: number, b: number): number => {
   return a + b;
 };
 
-const isProduction = process.env.NODE_ENV === 'production';
-export const prefix = isProduction ? process.env.ASSET_PREFIX : '';
+//const isProduction = process.env.NODE_ENV === 'production';
+export const prefix = '/'//isProduction ? process.env.ASSET_PREFIX : '';
 
 export const getImageUrl = (context: any, id: string, full: boolean) => {
   const foundPic = context.find((p: any) => p.id == id);
