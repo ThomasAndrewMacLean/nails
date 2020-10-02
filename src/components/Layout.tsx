@@ -33,6 +33,8 @@ const Layout = ({ children, page }: LayoutProps) => {
     if (refMenu && refMenu.current) {
       // @ts-ignore
       refMenu.current.style.opacity = '1';
+      // @ts-ignore
+      refMenu.current.style.overflow = 'scroll';
     }
   }, [refMenu, refMenu.current, menuOpen]);
   return (
@@ -45,7 +47,7 @@ const Layout = ({ children, page }: LayoutProps) => {
       <Header>
         <Hamburger menuOpen={menuOpen} toggleMenu={toggleMenu} />
 
-        <a href={prefix + '/'} className="titleWrapMain">
+        <a href={prefix + ''} className="titleWrapMain">
           <span className="white">
             <Image
               imageKey="logo-single-page"
@@ -195,6 +197,9 @@ const Header = styled.header`
     align-items: center;
     height: 50vh;
     margin-top: 35vh;
+    @media (max-width: 600px) {
+      margin-top: 50vh;
+    }
     li {
       margin: 0 1rem;
     }

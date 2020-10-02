@@ -74,6 +74,10 @@ const Main = styled.main`
     width: 50%;
     transform: translateX(100%);
     align-items: flex-end;
+    @media (max-width: 1000px) {
+      transform: translateX(0);
+    }
+
     h1 {
       padding-bottom: 10px;
 

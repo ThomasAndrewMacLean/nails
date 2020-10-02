@@ -46,6 +46,28 @@ export const ProductsWrapper = styled.div`
   }
   @media (max-width: 1000px) {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+
+    margin-top: 22rem;
+
+
+  .product0{
+    margin-top: 0;
+    padding-top:0;
+  }
+
+  .product1{
+    margin-top:0;
+  }
+  .product2{
+    margin-top:0;
+    margin-left:0;
+  }
+  .product3{
+    margin-left:0;
+  }
+  .niewsBrief{
+    margin-top:0;
+  }
   }
 `;

@@ -42,7 +42,8 @@ li{
 
 
   @media only screen and (max-width: 600px) {
-   
+    position: ${(props) => props.inModal && 'relative'};
+
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
