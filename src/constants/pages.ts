@@ -7,6 +7,6 @@ export const pages: { id: string; url: string; showInNav: boolean }[] = [
   
   //{ id: 'landing', url: 'landing', showInNav: false },
   { id: 'prijzen', url: 'prijzen', showInNav: true },
-  { id: 'afspraak', url: 'afspraak', showInNav: true },
+  //{ id: 'afspraak', url: 'afspraak', showInNav: true },
   //{ id: 'contact', url: 'contact', showInNav: true },
 ];

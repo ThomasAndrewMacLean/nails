@@ -79,6 +79,11 @@ const Layout = ({ children, page }: LayoutProps) => {
                     </li>
                   );
                 })}
+              <li>
+                <Button href="mailto:veerle@fabulousv.be?subject=Afspraak Fabulous V">
+                  <T translationKey="maakEenAfspraak" />
+                </Button>
+              </li>
             </ul>
             <Footer inModal={true}></Footer>
           </nav>

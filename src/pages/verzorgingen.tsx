@@ -33,24 +33,26 @@ const VerzorgingenPage = ({
                   </h4>
                 </div>
                 <ul>
-                  <li>
-                    <a href="#manicure">
-                      <T translationKey="manicureTitle" />
-                    </a>
-                  </li>
+                 
                   <li>
                     <a href="#gelnagels">
                       <T translationKey="gelnagelsTitle" />
                     </a>
                   </li>
-                  <li>
+                  {/* <li>
                     <a href="#lakken">
                       <T translationKey="lakkenTitle" />
                     </a>
-                  </li>
+                  </li> */}
                   <li>
                     <a href="#gellak">
                       <T translationKey="gellakTitle" />
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#spa">
+                      <T translationKey="spaTitle" />
                     </a>
                   </li>
                 </ul>

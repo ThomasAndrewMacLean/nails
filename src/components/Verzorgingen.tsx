@@ -48,9 +48,9 @@ const Products = ({}: PropsType) => {
         <Card dark={false} key={producten[2]} product={producten[2]}></Card>
       </div>
 
-      <div className="product3">
+      {/* <div className="product3">
         <Card dark={false} key={producten[3]} product={producten[3]}></Card>
-      </div>
+      </div> */}
       <div className="nieuwsBrief">
         <Newsletter></Newsletter>
       </div>

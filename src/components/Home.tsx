@@ -19,7 +19,7 @@ const Home = ({}: PropsType) => {
           <T translationKey="wieIsVeerle" />
           <br></br>
           <br></br>
-          <Button href="afspraak">
+          <Button href="mailto:veerle@fabulousv.be?subject=Afspraak Fabulous V">
             <T translationKey="maakEenAfspraak" />
           </Button>
         </div>

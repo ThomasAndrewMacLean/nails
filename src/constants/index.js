@@ -1,3 +1,3 @@
 export const HELLOWORLD = 'HELLO WORLD';
 
-export const producten = ['manicure', 'gelnagels', 'lakken', 'gellak'];
+export const producten = ['gelnagels', 'gellak', 'spa'];

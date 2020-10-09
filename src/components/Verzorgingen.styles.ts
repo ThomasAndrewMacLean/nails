@@ -29,7 +29,7 @@ export const ProductsWrapper = styled.div`
   }
 
   .product1{
-    margin-top:-12rem;
+    margin-top:-35rem;
   }
   .product2{
     margin-top:-25rem;

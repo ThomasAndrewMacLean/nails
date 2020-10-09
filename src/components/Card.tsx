@@ -13,7 +13,9 @@ const Card = ({ product, dark }: PropsType) => {
       <div className="prijs">
         <T translationKey={product + 'Prijs'}></T>
       </div>
-      <Button href="/afspraak">Maak een afspraak</Button>
+      <Button href="mailto:veerle@fabulousv.be?subject=Afspraak Fabulous V">
+        Maak een afspraak
+      </Button>
     </Styles.CardWrapper>
   );
 };
