@@ -14,7 +14,11 @@ export const CardWrapper = styled.div<{ dark: boolean }>`
 
   .prijs{
     font-weight: 700;
-    margin: 1.5rem 0 3rem;
+    margin: 1.5rem 0 ;
+  }
+  .subprijs{
+    font-size: 0.8rem; 
+margin-bottom:3rem;
   }
   button {
     margin-top:2rem;

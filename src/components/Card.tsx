@@ -11,7 +11,10 @@ const Card = ({ product, dark }: PropsType) => {
       <T translationKey={product + 'Text'}></T>
 
       <div className="prijs">
-        <T translationKey={product + 'Prijs'}></T>
+        Tarief: <T translationKey={product + 'Prijs'}></T>
+      </div>
+      <div className="subprijs">
+        <T translationKey={product + 'SubPrijs'}></T>
       </div>
       <Button href="mailto:veerle@fabulousv.be?subject=Afspraak Fabulous V">
         Maak een afspraak
