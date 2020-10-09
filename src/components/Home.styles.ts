@@ -9,10 +9,37 @@ export const HomeWrapper = styled.div`
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 50px;
-    grid-template-areas: 'wie wie verzorging verzorging' 'wie wie verzorging verzorging' 'producten producten x slogan' 'producten producten x prijslijst';
+    grid-template-areas: 'wie wie verzorging verzorging' 'wie wie verzorging verzorging' 'producten producten x slogan' 'producten producten x prijslijst' 'review review review review';
  }
 
+.review{
+  grid-area:review;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    img{
+      height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 100px;
+    }
 
+    .quoteName{
+      font-size: 12px;
+    line-height: 1.4rem;
+    text-align: center;
+    margin-top:1rem;
+    }
+
+    .quoteText{
+      margin-top:2rem;
+      max-width:400px;
+      /* font-size: 14px;
+    line-height: 1.4rem; */
+    text-align: center;
+    }
+}
   .verzorging {
     grid-area: verzorging;
 

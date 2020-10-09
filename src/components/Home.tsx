@@ -45,6 +45,17 @@ const Home = ({}: PropsType) => {
         <div className="producten">
           <Newsletter />
         </div>
+        <div className="review">
+          <Image imageKey="annouk"></Image>
+          <p className="quoteName">
+            Annouk <br /> Founder aGizzles, Westerling-MacLean
+            <br /> Waasmunster
+          </p>
+          <p className="quoteText">
+            Fabulous V draagt je op handen, in een ommedraai verzorgde handen.
+            Veerle geeft mijn nagels de stijl die bij me past.
+          </p>
+        </div>
       </div>
     </Styles.HomeWrapper>
   );
