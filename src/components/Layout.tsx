@@ -172,9 +172,9 @@ const Header = styled.header`
       }
 
       a:hover {
-        background: var(--background-dark);
+        background: var(--text-white);
         border: 2px solid var(--text-white);
-        color: white;
+        color: var(--background-dark);
       }
       li:last-child {
         // push afspraak bit away from the rest
