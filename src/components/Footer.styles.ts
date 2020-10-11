@@ -5,11 +5,13 @@ export const FooterWrapper = styled.footer<{ inModal: boolean }>`
   justify-content: space-between;
   align-items: flex-end;
   padding: 4rem 0;
-
+  width: 90%;
+    max-width: 900px;
+    margin:auto;
   /* position: ${(props) => props.inModal && 'absolute'}; */
-  width: ${(props) => props.inModal && '100%'};
-  bottom: ${(props) => props.inModal && '0'};
-  padding: ${(props) => props.inModal && '4rem'};
+ // width: ${(props) => props.inModal && '100%'};
+ // bottom: ${(props) => props.inModal && '0'};
+  //padding: ${(props) => props.inModal && '4rem'};
 
   p{
     line-height:1.5rem;
