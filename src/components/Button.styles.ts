@@ -12,7 +12,7 @@ export const LinkButton = styled.a`
   transition: all 250ms ease-out;
   border: none;
   &:hover {
-    background: var(--background-dark);
+    background: var(--background-red);
     color: white;
   }
 `;
@@ -29,4 +29,8 @@ export const NormalButton = styled.button`
   cursor: pointer;
   font-size: inherit;
   font-family: inherit;
+  &:hover {
+    background: var(--background-red);
+    color: white;
+  }
 `;

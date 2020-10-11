@@ -21,7 +21,6 @@ const Products = ({}: PropsType) => {
     <Styles.ProductsWrapper>
       <div
         style={{
-          marginTop: '-4rem',
           width: '100%',
           height: '266px',
           overflow: 'hidden',

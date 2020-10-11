@@ -6,14 +6,26 @@ export const FooterWrapper = styled.footer<{ inModal: boolean }>`
   align-items: flex-end;
   padding: 4rem 0;
 
-  position: ${(props) => props.inModal && 'absolute'};
+  /* position: ${(props) => props.inModal && 'absolute'}; */
   width: ${(props) => props.inModal && '100%'};
   bottom: ${(props) => props.inModal && '0'};
   padding: ${(props) => props.inModal && '4rem'};
 
+  p{
+    line-height:1.5rem;
+  }
   img {
     height: 18px;
     opacity: 0.8;
+  }
+  .socials{
+    ul{
+      padding-bottom:0;
+
+    }
+    li{
+      padding-bottom:0;
+    }
   }
   .whatsapp {
     font-size: 1.4rem;

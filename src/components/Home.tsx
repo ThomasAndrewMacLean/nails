@@ -1,6 +1,6 @@
 import React from 'react';
 import * as Styles from './Home.styles';
-import { Button, Image, T, Newsletter } from './';
+import { Button, Image, T, Newsletter, Testimonials } from './';
 type PropsType = {};
 const Home = ({}: PropsType) => {
   return (
@@ -45,16 +45,9 @@ const Home = ({}: PropsType) => {
         <div className="producten">
           <Newsletter />
         </div>
+
         <div className="review">
-          <Image imageKey="annouk"></Image>
-          <p className="quoteName">
-            Annouk <br /> Founder aGizzles, Westerling-MacLean
-            <br /> Waasmunster
-          </p>
-          <p className="quoteText">
-            Fabulous V draagt je op handen, in een ommedraai verzorgde handen.
-            Veerle geeft mijn nagels de stijl die bij me past.
-          </p>
+          <Testimonials />
         </div>
       </div>
     </Styles.HomeWrapper>

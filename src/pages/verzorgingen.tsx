@@ -33,7 +33,6 @@ const VerzorgingenPage = ({
                   </h4>
                 </div>
                 <ul>
-                 
                   <li>
                     <a href="#gelnagels">
                       <T translationKey="gelnagelsTitle" />
@@ -89,7 +88,7 @@ const Main = styled.main`
     h4 {
       margin-bottom: 2rem;
 
-      padding-left: 1rem;
+      padding-left: 3rem;
       font-size: 1rem;
     }
     ul {

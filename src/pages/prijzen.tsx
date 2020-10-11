@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { TranslationsType, ImagesType, SEOType } from '../types';
 
-import { Layout, SEO, T } from '../components';
+import { Layout, SEO, T, Testimonials } from '../components';
 import { producten } from '../constants';
 import {
   TranslationContext,
@@ -35,6 +35,8 @@ const PrijzenPage = ({ translations, pics, seo }: PrijzenPageProps) => {
                   );
                 })}
               </div>
+
+              <Testimonials />
             </Main>
           </Layout>
         </TranslationContext.Provider>

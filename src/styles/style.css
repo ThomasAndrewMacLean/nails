@@ -6,8 +6,10 @@
   --background-light: #e6d4c8;
   /* --background-highlight: #e6341f; */
   --background-highlight: #f24f64;
+  --background-red: #e6331f;
   --text-dark: #333;
   --text-grey: #666;
+  --text-white: #fff;
   --border: 3px solid black;
 }
 * {

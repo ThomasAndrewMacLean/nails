@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
-export const HamburgerWrapper = styled.div`
-  z-index: 99;
+export const HamburgerWrapper = styled.div<{menuOpen: boolean}>`
+ // z-index: 99;
+ padding-top: ${(props) => props.menuOpen && "3rem"};
   transform: scale(0.5);
   #nav-icon1,
   #nav-icon2,
@@ -86,4 +87,5 @@ export const HamburgerWrapper = styled.div`
     width: 0%;
     left: 50%;
   }
+
 `;

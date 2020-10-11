@@ -58,6 +58,7 @@ const Layout = ({ children, page }: LayoutProps) => {
         </a>
         {menuOpen && (
           <nav ref={refMenu}>
+            <Hamburger menuOpen={menuOpen} toggleMenu={toggleMenu} />
             <div className="titleWrap menuOpen">
               <div>
                 <Image
@@ -90,12 +91,12 @@ const Layout = ({ children, page }: LayoutProps) => {
         )}
       </Header>
       {children}
-      <span className="white">
+      {/* <span className="white">
         <Image
           imageKey="logo-small"
           style={{ display: 'block', margin: '1rem auto 0rem' }}
         ></Image>
-      </span>
+      </span> */}
       <FullWidthContainer textColor="var(--text-dark)" backgroundColor="white">
         <InnerContainer>
           <Footer inModal={false}></Footer>
@@ -163,7 +164,8 @@ const Header = styled.header`
         background: white;
         width: 300px;
         border: 2px solid var(--background-dark);
-        color: var(--text-dark);
+        background: var(--background-dark);
+        color: var(--text-white);
         text-align: center;
         font-size: 20px;
         transition: all 350ms ease;
@@ -171,6 +173,7 @@ const Header = styled.header`
 
       a:hover {
         background: var(--background-dark);
+        border: 2px solid var(--text-white);
         color: white;
       }
       li:last-child {
@@ -180,7 +183,7 @@ const Header = styled.header`
     }
     .titleWrap {
       padding: 4rem;
-      padding-top: 10rem;
+      padding-top: 1rem;
       position: absolute;
       // background: white;
       width: 100vw;
@@ -188,7 +191,7 @@ const Header = styled.header`
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin-top: 0.5rem;
+      margin-top: -2.5rem;
     }
   }
   .menu-links {
@@ -201,9 +204,9 @@ const Header = styled.header`
     justify-content: center;
     align-items: center;
     height: 50vh;
-    margin-top: 35vh;
+    margin-top: 11rem;
     @media (max-width: 600px) {
-      margin-top: 50vh;
+      margin-top: 30vh;
     }
     li {
       margin: 0 1rem;
