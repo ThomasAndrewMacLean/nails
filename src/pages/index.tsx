@@ -30,7 +30,7 @@ const IndexPage = ({ translations, pics, seo }: IndexPageProps) => {
 };
 
 const Main = styled.main`
-margin-top: 8rem;
+  margin-top: 8rem;
 `;
 
 export const getStaticProps = async () => {
