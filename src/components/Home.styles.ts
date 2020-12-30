@@ -10,23 +10,23 @@ export const HomeWrapper = styled.div`
     grid-template-rows: 1fr 1fr;
     gap: 50px;
     grid-template-areas: 'wie wie verzorging verzorging' 'wie wie verzorging verzorging' 'producten producten x slogan' 'producten producten x prijslijst' 'review review review review';
- }
- .review{
-  grid-area:review;
-  display: flex;
+  }
+  .review {
+    grid-area: review;
+    display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;}
+    flex-direction: column;
+  }
 
   .verzorging {
     grid-area: verzorging;
 
     img {
-      
       width: 100%;
-    display: block;
-    height: 300px;
-    object-fit: cover;
+      display: block;
+      height: 300px;
+      object-fit: cover;
     }
     button {
       display: block;
@@ -37,10 +37,11 @@ export const HomeWrapper = styled.div`
       text-align: right;
       padding: 1rem 0;
       padding-right: 4rem;
+      transition: all 300ms ease;
       &:hover {
-    background: var(--background-red);
-    color: white;
-  }
+        background: var(--background-red);
+        color: white;
+      }
     }
   }
 
@@ -61,9 +62,9 @@ export const HomeWrapper = styled.div`
       justify-content: center;
       float: right;
       &:hover {
-    background: var(--background-red);
-    color: white;
-  }
+        background: var(--background-red);
+        color: white;
+      }
     }
   }
 
@@ -80,9 +81,9 @@ export const HomeWrapper = styled.div`
       color: white;
       padding: 1rem 0;
       &:hover {
-    background: var(--background-red);
-    color: white;
-  }
+        background: var(--background-red);
+        color: white;
+      }
     }
   }
 
@@ -99,9 +100,8 @@ export const HomeWrapper = styled.div`
     justify-content: space-between;
     strong {
       color: var(--background-highlight);
-   
-    font-style: italic;
-  
+
+      font-style: italic;
     }
 
     a {
@@ -115,11 +115,11 @@ export const HomeWrapper = styled.div`
       padding: 1rem 0;
       display: flex;
       justify-content: center;
-      margin-top:4rem;
+      margin-top: 4rem;
       &:hover {
-    background: var(--background-red);
-    color: white;
-  }
+        background: var(--background-red);
+        color: white;
+      }
     }
   }
 
@@ -140,9 +140,9 @@ export const HomeWrapper = styled.div`
       padding: 1rem 0;
       /* padding-right: 4rem; */
       &:hover {
-    background: var(--background-red);
-    color: white;
-  }
+        background: var(--background-red);
+        color: white;
+      }
     }
   }
 
@@ -155,31 +155,28 @@ export const HomeWrapper = styled.div`
       border-radius: 0;
       /* background: var(--background-light); */
       color: var(--background-dark);
-      
-      margin-top:4rem;
+
+      margin-top: 4rem;
       &:hover {
-    background: var(--background-red);
-    color: white;
-  }
+        background: var(--background-red);
+        color: white;
+      }
     }
   }
-
 
   @media only screen and (max-width: 600px) {
-    .grid-container { grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 50px;
-    grid-template-areas: 'wie' 'verzorging' 'producten' 'slogan' "prijslijst" "review";
- 
-
-
-
+    .grid-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 50px;
+      grid-template-areas: 'wie' 'verzorging' 'producten' 'slogan' 'prijslijst' 'review';
     }
-    
-    .wie{
-      text-align:center;
-      a{
-        width:100%;
+
+    .wie {
+      text-align: center;
+      a {
+        width: 100%;
       }
-    }}
+    }
+  }
 `;

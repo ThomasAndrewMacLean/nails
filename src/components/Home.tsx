@@ -1,5 +1,6 @@
 import React from 'react';
 import * as Styles from './Home.styles';
+
 import { Button, Image, T, Newsletter, Testimonials } from './';
 type PropsType = {};
 const Home = ({}: PropsType) => {
