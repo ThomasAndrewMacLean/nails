@@ -7,6 +7,7 @@ const Newsletter = ({}: PropsType) => {
   const [inscribed, setInscribed] = useState(false);
   const signUp = async (e: any) => {
     e.preventDefault();
+    
     const mailChimpUrl =
       'https://fabulousv.us2.list-manage.com/subscribe/post?u=c3fe5ecfa5bcc71f46247ebd1&amp;id=ee28f037af';
     const fd = new FormData();
