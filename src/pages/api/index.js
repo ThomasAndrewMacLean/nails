@@ -12,7 +12,7 @@ export default async function handler(req, res) {
   const images = allImages.map((x) => x.fields);
   console.log('images', images);
   const xxx = images.map((e) => {
-    console.log('eee', e);
+   
 
     return {
       id: e.id,
