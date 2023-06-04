@@ -16,7 +16,7 @@ export const FooterWrapper = styled.footer<{ inModal: boolean }>`
   p{
     line-height:1.5rem;
   }
-  img {
+  img,svg {
     height: 18px;
     opacity: 0.8;
   }

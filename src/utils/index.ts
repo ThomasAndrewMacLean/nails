@@ -5,7 +5,7 @@ export const add = (a: number, b: number): number => {
 };
 
 //const isProduction = process.env.NODE_ENV === 'production';
-export const prefix = '/'//isProduction ? process.env.ASSET_PREFIX : '';
+export const prefix = '/'; //isProduction ? process.env.ASSET_PREFIX : '';
 
 export const getImageUrl = (context: any, id: string, full: boolean) => {
   const foundPic = context.find((p: any) => p.id == id);
@@ -13,7 +13,7 @@ export const getImageUrl = (context: any, id: string, full: boolean) => {
   if (!foundPic) {
     console.error('Picture not found!', id);
   }
-  return full ? foundPic?.pic[0].url : foundPic?.pic[0].thumbnails.large.url;
+  return full ? '/images/' + id : '/images/thumbs/' + id;
 };
 
 export const getSEO = (context: SEOType[], id: string) => {
